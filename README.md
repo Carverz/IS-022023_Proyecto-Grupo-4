@@ -10,7 +10,7 @@ Integrantes:
 - Josias González
 
 
--------- MODELO DE DOMINIO -------------
+-------- MODELO DE DOMINIO -------------\n
 Diagrama de Clases
 ![DiagramaClases](C:\Users\Brhandon\Documents\GitHub\IS-022023_Proyecto-Grupo-4\docs\Class.png)
 
