@@ -10,7 +10,7 @@ Repositorio de Proyecto. Grupo #4
 - Josias González
 
 
-#-------- MODELO DE DOMINIO -------------
+# MODELO DE DOMINIO -------------
 
 Diagrama de Clases
 ![Class](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/assets/86967736/62e05679-aeee-4ed0-920c-c5540decb6d1)
