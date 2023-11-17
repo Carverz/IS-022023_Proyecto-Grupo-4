@@ -1,0 +1,53 @@
+@startuml Class
+left to right direction
+skinparam Nodesep 40
+skinparam boxsize 100 50
+
+class Usuario {
+  # nombre: String
+  # apellido: String
+}
+
+class Perfil{
+}
+
+abstract Admin {
+}
+
+class Examen {
+  # nombre: String
+  - instrucciones: String
+  - tiempo: uint
+}
+
+class Pregunta {
+  - texto: String
+  - respuestaCorrecta: String
+  - justificacion: String
+  - resultadoRespuesta: bool
+  - tipoDominio: String
+}
+
+class Certificado {
+  - nombreCertificado: String
+  - fecha: Date
+  - nombreProfesores: String
+  - nombreEstudiante: String
+  - resumenPreguntas: String
+}
+
+class Curso{
+  - nombreCurso: String
+  - profesores: String
+}
+
+
+Curso "1..*" o-- "0..*" Usuario : hace un <
+Curso "1" *-- "1" Examen
+Usuario "1" -- "1" Perfil : tiene un >
+Admin "1" -- "1..*" Examen : crea un >
+Examen "1" *-- "1..*" Pregunta : tiene
+Admin "1..*" --|> "0..*" Usuario : registra a > 
+(Curso,Usuario) . Certificado
+
+@enduml

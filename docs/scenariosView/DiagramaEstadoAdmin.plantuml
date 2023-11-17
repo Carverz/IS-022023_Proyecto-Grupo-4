@@ -1,0 +1,17 @@
+@startuml DiagramaEstadoAdmin
+
+[*] --> Credenciales_entregadas
+state choice1 <<choice>>
+state end <<end>>
+
+Credenciales_entregadas --> Credenciales_entregadas : validacion fallida 
+Credenciales_entregadas --> Validado : validacion exitosa
+Validado --> Alumno_registrado : Registrando alumno
+Alumno_registrado --> choice1 : Seguir
+choice1 --> Validado : Si
+choice1 --> Finalizado : No
+Validado --> Examen_creado : Creando examen
+Examen_creado --> choice1 : Seguir
+Finalizado --> end
+
+@enduml
