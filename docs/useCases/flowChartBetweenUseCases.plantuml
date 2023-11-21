@@ -1,0 +1,20 @@
+@startuml
+start
+:Usuario selecciona curso;
+if (Curso válido?) then (sí)
+  :Mostrar preguntas;
+  if (Usuario responde preguntas) then (sí)
+    :Validar respuestas;
+    if (Respuestas válidas?) then (sí)
+      :Mostrar resultados;
+    else (no)
+      :Mostrar mensaje de error;
+    endif
+  else (no)
+    :Mostrar mensaje de error;
+  endif
+else (no)
+  :Mostrar mensaje de error;
+endif
+stop
+@enduml

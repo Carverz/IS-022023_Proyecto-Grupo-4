@@ -1,0 +1,48 @@
+@startuml
+left to right direction
+
+actor Admin as A
+actor Usuario as U1
+
+rectangle "Sistema de Cursos y Certificados" {
+  
+  rectangle "Sistema de Gestión de Usuarios" {
+    A --> (Agregar Usuario)
+    A --> (Modificar Usuario)
+    A --> (Eliminar Usuario)
+    A --> (Ver Detalles de Usuario)
+  }
+  
+  rectangle "Sistema de Ayuda y Soporte" {
+    U1 --> (Ver Documentación)
+    U1 --> (Buscar en la Base de Conocimientos)
+  }
+  
+  rectangle "Sistema de Cursos y Exámenes" {
+    U1 --> (Ver Lista de Cursos)
+    U1 --> (Seleccionar Curso)
+    U1 --> (Ver Lista de Exámenes)
+    U1 --> (Seleccionar Examen)
+    U1 --> (Responder Preguntas)
+    U1 --> (Enviar Examen)
+    U1 --> (Ver Resultados)
+    U1 --> (Ver Respuestas Correctas)
+    U1 --> (Ver Certificado)
+    U1 --> (Descargar Certificado)
+    
+    (Responder Preguntas) ..> (Ver Respuestas Correctas) : include
+    (Enviar Examen) ..> (Ver Resultados) : include
+    (Ver Lista de Exámenes) ..> (Modificar Examen) : extend
+  }
+  
+  rectangle "Sistema de Administración de Exámenes" {
+    A --> (Ver Lista de Exámenes)
+    A --> (Modificar Examen)
+  }
+  
+  rectangle "Sistema de Sesiones" {
+    U1 --> (Cerrar Sesión)
+  }
+}
+
+@enduml
