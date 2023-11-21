@@ -25,8 +25,6 @@ rectangle "Sistema de Cursos y Certificados" {
     U1 --> (Seleccionar Examen)
     U1 --> (Responder Preguntas)
     U1 --> (Enviar Examen)
-    U1 --> (Ver Resultados)
-    U1 --> (Ver Respuestas Correctas)
     U1 --> (Ver Certificado)
     U1 --> (Descargar Certificado)
     
@@ -41,7 +39,11 @@ rectangle "Sistema de Cursos y Certificados" {
   }
   
   rectangle "Sistema de Sesiones" {
+    U1 --> (Iniciar Sesion)
     U1 --> (Cerrar Sesión)
+    A --> (Iniciar Sesion)
+    A --> (Cerrar Sesión)
+
   }
 }
 

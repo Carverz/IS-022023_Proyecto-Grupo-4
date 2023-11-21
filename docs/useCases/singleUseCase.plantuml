@@ -18,13 +18,15 @@ rectangle "Sistema de Cursos y Certificados" {
   U1 --> (Seleccionar Examen)
   U1 --> (Responder Preguntas)
   U1 --> (Enviar Examen)
-  U1 --> (Ver Resultados)
-  U1 --> (Ver Respuestas Correctas)
   U1 --> (Ver Certificado)
   U1 --> (Descargar Certificado)
   A --> (Ver Lista de Exámenes)
   A --> (Modificar Examen)
+  U1 --> (Iniciar Sesion)
   U1 --> (Cerrar Sesión)
+  A --> (Iniciar Sesion)
+  A --> (Cerrar Sesión)
+
   
   (Responder Preguntas) ..> (Ver Respuestas Correctas) : include
   (Enviar Examen) ..> (Ver Resultados) : include

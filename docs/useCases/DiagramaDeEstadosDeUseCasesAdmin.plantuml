@@ -1,0 +1,23 @@
+@startuml
+skinparam Style strictuml
+
+state choice1 <<choice>>
+state choice2 <<choice>>
+[*] --> Sesion_iniciada: Iniciar sesion
+Sesion_iniciada --> Modificando_usuario: Modificar un usuario
+Modificando_usuario --> Usuario_agregado: Agregar usuario
+Usuario_agregado --> choice1: Desea seguir administrando la aplicacion?
+choice1 --> Sesion_iniciada: Si
+choice1 --> [*]: No
+Modificando_usuario --> Usuario_visto: Ver detalles del usuario
+Usuario_visto --> Usuario_eliminado: Eliminar usuario
+Usuario_eliminado --> choice1: Desea seguir administrando la aplicacion?
+
+
+Sesion_iniciada --> Examenes_Vistos: Ver lista de examenes
+Examenes_Vistos --> Examen_modificado: Modificar examen
+Examen_modificado --> choice2: Desea seguir administrando la aplicacion?
+choice2 --> Sesion_iniciada: Si
+choice2 --> [*]: No
+
+@enduml
