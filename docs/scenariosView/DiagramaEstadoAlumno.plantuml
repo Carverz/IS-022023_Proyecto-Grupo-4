@@ -2,18 +2,14 @@
 
 skinparam Style strictuml
 
-state choice1 <<choice>>
-state choice2 <<choice>>
-[*] --> Verificado: Verifiacion de credenciales del alumno
-Verificado--> Verificado: Editar informacion del alumno
-Verificado --> Examen_Seleccionado: Seleccionar un tipo de examen
-Examen_Seleccionado--> Examen_Presentado: Presentar examen
-Examen_Presentado --> choice2: Desea ver la resolucion del examen?
-choice2 --> Revisando_Resolucion: Si
-Revisando_Resolucion --> Examen_Finalizado: Finalizar examen
-choice2--> Examen_Finalizado: No
-Examen_Finalizado--> choice1: Desea realizar otro examen?
-choice1 --> Verificado: Realizar otro examen
-choice1-->[*]: Recibir certificado
+[*] --> Credenciales_Verificadas: Verifiacion de credenciales del alumno
+Credenciales_Verificadas--> Credenciales_Verificadas: Editar informacion del alumno
+Credenciales_Verificadas --> Examen_Seleccionado: Seleccionar un tipo de examen
+Examen_Seleccionado--> Presentando_Examen: Presentar examen
+Presentando_Examen --> Presentando_Examen: Reponder pregunta
+Presentando_Examen --> Examen_Finalizado: Finalizar examen
+Examen_Finalizado --> Viendo_Resultado: Ver resultado
+Viendo_Resultado --> Credenciales_Verificadas
+Viendo_Resultado --> [*]: Recibir certificado
 
 @enduml
