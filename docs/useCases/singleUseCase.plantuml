@@ -6,31 +6,29 @@ actor Usuario as U1
 
 rectangle "Sistema de Cursos y Certificados" {
   
-  A --> (Agregar Usuario)
-  A --> (Modificar Usuario)
-  A --> (Eliminar Usuario)
-  A --> (Ver Detalles de Usuario)
-  U1 --> (Ver Documentación)
-  U1 --> (Buscar en la Base de Conocimientos)
-  U1 --> (Ver Lista de Cursos)
-  U1 --> (Seleccionar Curso)
-  U1 --> (Ver Lista de Exámenes)
-  U1 --> (Seleccionar Examen)
-  U1 --> (Responder Preguntas)
-  U1 --> (Enviar Examen)
-  U1 --> (Ver Certificado)
-  U1 --> (Descargar Certificado)
-  A --> (Ver Lista de Exámenes)
-  A --> (Modificar Examen)
-  U1 --> (Iniciar Sesion)
-  U1 --> (Cerrar Sesión)
   A --> (Iniciar Sesion)
   A --> (Cerrar Sesión)
+  A --> (Administrar Usuarios)
+  A --> (Agregar Usuario)
+  A --> (Eliminar Usuario)
+  A --> (Ver Lista de Exámenes)
+  A --> (Modificar Examen)
+  A --> (Modificar informacion de perfil)
+  U1 --> (Iniciar Sesion)
+  U1 --> (Cerrar Sesión)
+  U1 --> (Ver Documentación)
+  U1 --> (Ver Lista de Cursos)
+  U1 --> (Ver Lista de Exámenes)
+  U1 --> (Responder Preguntas)
+  U1 --> (Ver Certificado)
+  U1 --> (Resolver Examen)
+  U1 --> (Ver Resultados)
+  U1--> (Modificar informacion de perfil)
+  U1 --> (Finalizar Examen)
+
 
   
-  (Responder Preguntas) ..> (Ver Respuestas Correctas) : include
-  (Enviar Examen) ..> (Ver Resultados) : include
-  (Ver Lista de Exámenes) ..> (Modificar Examen) : extend
+
 }
 
 @enduml

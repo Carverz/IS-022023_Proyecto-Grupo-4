@@ -1,31 +1,21 @@
 @startuml
 skinparam Style strictuml
 
-state choice1 <<choice>>
-state choice2 <<choice>>
-state choice3 <<choice>>
+
 [*] --> Sesion_iniciada: Iniciar sesion
-Sesion_iniciada --> Buscado: Buscar contenido en la documnetacion
-Buscado --> Documentacion_Vista: ver documentacion
-Documentacion_Vista-->choice1: Desea buscar otro tema en la documentacion?
-choice1 --> Buscado: Si
-choice1 --> Sesion_iniciada: No
+Sesion_iniciada --> Sesion_iniciada: Modificar inofrmacion del perfil
+Sesion_iniciada --> Viendo_documentacion: Ver documentacion
+Viendo_documentacion --> Sesion_iniciada
 
 Sesion_iniciada --> Cursos_Vistos: Ver lista de cursos
-Cursos_Vistos --> Curso_Seleccionado: Seleccionar curso
-Curso_Seleccionado --> Examenes_Vistos: Ver lista de examenes
-Examenes_Vistos --> Examen_Seleccionado: Seleccioanr examen
-Examen_Seleccionado --> Preguntas_respondidas: Responder preguntas 
-Preguntas_respondidas --> choice2: Desea ver las respuestas correctas?
-choice2 --> RespuestasCorrectas_Vistas: Si
-RespuestasCorrectas_Vistas --> Examen_Enviado: Enviar examen
-choice2 --> Examen_Enviado: No
-Examen_Enviado --> Resultado_Visto: Ver resultado
-Resultado_Visto --> choice3: Desea ver otro curso?
-choice3 --> Sesion_iniciada: Si
-choice3 --> Certificado_Visto: Ver certificado
-Certificado_Visto --> Certificado_Descargado: Descargar certificado
-Certificado_Descargado --> [*]: Cerrar sesion
+Cursos_Vistos --> Examenes_Vistos: Ver lista de examenes
+Examenes_Vistos --> Resolviendo_Examen: Resolver examen
+Resolviendo_Examen --> Resolviendo_Examen: Responder preguntas 
+Resolviendo_Examen --> Examen_Finalizado: Finalizar examen
+Examen_Finalizado --> Resultado_Visto: Ver resultado
+Resultado_Visto --> Viendo_Certificado: Ver certificado
+Viendo_Certificado -->  Sesion_iniciada
+Sesion_iniciada --> [*]: Cerrar sesion
 
 
 @enduml
