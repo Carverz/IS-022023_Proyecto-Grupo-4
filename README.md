@@ -35,7 +35,7 @@ Repositorio de Proyecto. Grupo #4
 
 **Digrama de Casos de Uso Admin**
 
-![DiagramaCasosDeUsoAdmin]([https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaCasosDeUsos/DiagramaCasosDeUsos.png](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesAdmin/DiagramaDeEstadosDeUseCasesAdmin.png)https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesAdmin/DiagramaDeEstadosDeUseCasesAdmin.png)
+![DiagramaCasosDeUsoAdmin](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesAdmin/DiagramaDeEstadosDeUseCasesAdmin.png)
 
 **Digrama de Casos de Uso Alumno**
 
