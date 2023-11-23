@@ -14,7 +14,7 @@ Repositorio de Proyecto. Grupo #4
 
 **Diagrama de Clases**
 
-![Class](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/assets/86967736/62e05679-aeee-4ed0-920c-c5540decb6d1)
+![Class](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/Class.png)
 
 **Diagrama de Estado Admin**
 
