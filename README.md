@@ -44,4 +44,8 @@ Repositorio de Proyecto. Grupo #4
 https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sharing
 
 ##Prototipos de Interfaces
+![IniciarSesion](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIARSESION.png)
 
+![Inicio](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIO.png)
+
+![AdministrarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ADMINISTRAREXAMENES.png)
