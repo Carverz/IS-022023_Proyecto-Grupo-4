@@ -28,7 +28,6 @@ Repositorio de Proyecto. Grupo #4
 
 # MODELO DE CASOS DE USO -------------
 
-
 **Digrama de Casos de Uso**
 
 ![DiagramaCasosDeUso](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaCasosDeUsos/DiagramaCasosDeUsos.png)
@@ -40,3 +39,9 @@ Repositorio de Proyecto. Grupo #4
 **Digrama de Casos de Uso Alumno**
 
 ![DiagramaCasosDeUsoAlumno](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesUsuario/DiagramaDeEstadosDeUseCasesUsuario.png)
+
+**Casos de Uso Prioritarios**
+https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sharing
+
+##Prototipos de Interfaces
+
