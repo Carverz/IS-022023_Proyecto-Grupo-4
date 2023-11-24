@@ -41,11 +41,30 @@ Repositorio de Proyecto. Grupo #4
 ![DiagramaCasosDeUsoAlumno](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesUsuario/DiagramaDeEstadosDeUseCasesUsuario.png)
 
 **Casos de Uso Prioritarios**
+
 https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sharing
 
-##Prototipos de Interfaces
+## Prototipos de Interfaces
 ![IniciarSesion](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIARSESION.png)
 
 ![Inicio](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIO.png)
 
 ![AdministrarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ADMINISTRAREXAMENES.png)
+
+![AdministrarUsuarios](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ADMINISTRARUSUARIOS.png)
+
+![Documentación](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/DOCUMENTACI%C3%93N.png)
+
+![VerCurso](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VERCURSO.png)
+
+![VerExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VEREXAMENES.png)
+
+![ResponderExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/RESPONDEREXAMEN.png)
+
+![FinalizarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/FINALIZAREXAMEN.png)
+
+![Certificado](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/CERTIFICADO.png)
+
+![EditarPerfil](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/EDITARPERFIL.png)
+
+![CerrarSesion](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/CERRARSESION.png)
