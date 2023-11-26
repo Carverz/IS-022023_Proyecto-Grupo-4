@@ -2,16 +2,23 @@
 left to right direction
 skinparam Nodesep 40
 skinparam boxsize 100 50
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+hide methods
 
-class Usuario {
+class Persona{
   # nombre: String
   # apellido: String
+}
+
+class Estudiante {
+
 }
 
 class Perfil{
 }
 
-abstract Admin {
+abstract Profesor {
 }
 
 class Examen {
@@ -25,7 +32,6 @@ class Pregunta {
   - respuestaCorrecta: String
   - justificacion: String
   - resultadoRespuesta: bool
-  - tipoDominio: String
 }
 
 class Certificado {
@@ -33,7 +39,7 @@ class Certificado {
   - fecha: Date
   - nombreProfesores: String
   - nombreEstudiante: String
-  - resumenPreguntas: String
+  - ExamenesRealizados: String
 }
 
 class Curso{
@@ -41,13 +47,19 @@ class Curso{
   - profesores: String
 }
 
+class Dominio{
+  dominio string 
+}
 
-Curso "1..*" o-- "0..*" Usuario : hace un <
+Profesor --|> Persona
+Estudiante --|> Persona
+Curso "1..*" o-- "0..*" Estudiante
 Curso "1" *-- "1" Examen
-Usuario "1" -- "1" Perfil : tiene un >
-Admin "1" -- "1..*" Examen : crea un >
+Persona "1" -- "1" Perfil : tiene un >
+Profesor "1" -- "1..*" Examen : crea un >
 Examen "1" *-- "1..*" Pregunta : tiene
-Admin "1..*" --|> "0..*" Usuario : registra a > 
-(Curso,Usuario) . Certificado
+Profesor "1..*" -- "0..*" Estudiante : registra a > 
+Pregunta "1" *-- Dominio: Posee
+(Curso,Estudiante) . Certificado
 
 @enduml
