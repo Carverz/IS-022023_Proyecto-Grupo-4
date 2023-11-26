@@ -18,7 +18,7 @@ class Estudiante {
 class Perfil{
 }
 
-abstract Profesor {
+abstract Administrador {
 }
 
 class Examen {
@@ -51,12 +51,12 @@ class Dominio{
   dominio string 
 }
 
-Profesor --|> Persona
+Administrador --|> Persona
 Estudiante --|> Persona
 Curso "1..*" o-- "0..*" Estudiante
 Curso "1" *-- "1" Examen
 Persona "1" -- "1" Perfil : tiene un >
-Profesor "1" -- "1..*" Examen : crea un >
+Administrador "1" -- "1..*" Examen : crea un >
 Examen "1" *-- "1..*" Pregunta : tiene
 Profesor "1..*" -- "0..*" Estudiante : registra a > 
 Pregunta "1" *-- Dominio: Posee
