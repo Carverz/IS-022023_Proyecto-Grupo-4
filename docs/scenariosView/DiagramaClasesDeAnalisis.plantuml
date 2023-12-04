@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+hide footbox
+hide link
+Actor Alumno
+boundary ExamenesDisponibles
+boundary Inicio
+boundary VerExamen
+entity Instruccion
+entity Examen
+entity Puntuacion
+entity Pregunta
+control InicioExamen
+
+Alumno -- Inicio
+Inicio -- ExamenesDisponibles
+ExamenesDisponibles -- VerExamen
+ExamenesDisponibles -- Examen
+VerExamen -- InicioExamen
+InicioExamen -- Instruccion
+InicioExamen -- Examen
+Instruccion -- Examen
+Examen -- Pregunta
+Examen -- Puntuacion
+Pregunta -- Puntuacion
+@enduml
