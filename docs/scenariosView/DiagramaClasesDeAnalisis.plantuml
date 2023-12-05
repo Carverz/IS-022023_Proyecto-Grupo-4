@@ -4,13 +4,14 @@ hide footbox
 hide link
 Actor Alumno
 boundary ExamenesDisponibles
-
 boundary VerExamen
+boundary FianlizarExamen
 entity Instruccion
 entity Examen
 entity Puntuacion
 entity Pregunta
 control InicioExamen
+control FinExamen
 
 Alumno  -- ExamenesDisponibles
 ExamenesDisponibles -- VerExamen
@@ -21,4 +22,8 @@ Instruccion -- Examen
 Examen -- Pregunta
 Examen -- Puntuacion
 Pregunta -- Puntuacion
+VerExamen -- FianlizarExamen
+FianlizarExamen -- FinExamen
+FinExamen -- Examen
+
 @enduml
