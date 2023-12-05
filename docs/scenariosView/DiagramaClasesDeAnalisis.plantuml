@@ -5,7 +5,7 @@ hide link
 Actor Alumno
 boundary ExamenesDisponibles
 boundary VerExamen
-boundary FianlizarExamen
+boundary FinalizarExamen
 entity Instruccion
 entity Examen
 entity Puntuacion
@@ -22,8 +22,8 @@ Instruccion -- Examen
 Examen -- Pregunta
 Examen -- Puntuacion
 Pregunta -- Puntuacion
-VerExamen -- FianlizarExamen
-FianlizarExamen -- FinExamen
-FinExamen -- Examen
+VerExamen -- FinalizarExamen
+FinalizarExamen -- FinExamen
+FinExamen -- Puntuacion
 
 @enduml
