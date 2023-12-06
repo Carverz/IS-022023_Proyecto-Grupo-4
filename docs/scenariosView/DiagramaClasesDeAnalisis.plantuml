@@ -2,28 +2,31 @@
 left to right direction
 hide footbox
 hide link
-Actor Alumno
-boundary ExamenesDisponibles
-boundary VerExamen
-boundary FinalizarExamen
-entity Instruccion
-entity Examen
-entity Puntuacion
-entity Pregunta
-control InicioExamen
-control FinExamen
+Actor Student
+boundary AvailableExamsView
+boundary ExamView
+boundary EndExamView
+entity Exam
+entity Puntuation
+entity Question
+control StartExamController
+control EndExamController
+control PrensentExamContoller
+control AnwswerQuestionController
 
-Alumno  -- ExamenesDisponibles
-ExamenesDisponibles -- VerExamen
-VerExamen -- InicioExamen
-InicioExamen -- Instruccion
-InicioExamen -- Examen
-Instruccion -- Examen
-Examen -- Pregunta
-Examen -- Puntuacion
-Pregunta -- Puntuacion
-VerExamen -- FinalizarExamen
-FinalizarExamen -- FinExamen
-FinExamen -- Puntuacion
+Student  -- AvailableExamsView
+AvailableExamsView -- ExamView
+StartExamController -- Exam
+ExamView -- EndExamView
+Exam -- Question
+Exam -- Puntuation
+Question -- Puntuation
+EndExamView -- PrensentExamContoller
+EndExamController -- Puntuation
+ExamView -- PrensentExamContoller
+PrensentExamContoller -- StartExamController
+PrensentExamContoller -- EndExamController
+PrensentExamContoller -- AnwswerQuestionController
+AnwswerQuestionController -- Question
 
 @enduml
