@@ -1,0 +1,27 @@
+@startuml DiagramaDeClasesDeAnalisis
+hide footbox
+hide link
+Actor Student
+boundary AvailableExamsView
+boundary ExamView
+boundary "FinishExamView" as EndExamView
+entity Exam
+entity Results
+entity Question
+control "FinishedExamController" as EndExamController
+control "TakeAnExamController" as PresentExamContoller
+control AnwswerQuestionController
+
+Student  -- AvailableExamsView
+AvailableExamsView -- ExamView
+Exam -- EndExamController
+Question -- Results
+EndExamView -- PresentExamContoller
+EndExamView -- EndExamController
+EndExamController -- Results
+ExamView -- PresentExamContoller
+Exam -- AnwswerQuestionController
+AnwswerQuestionController -- Question
+PresentExamContoller -- Exam
+
+@enduml

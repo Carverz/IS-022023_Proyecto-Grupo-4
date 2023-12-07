@@ -1,0 +1,76 @@
+@startuml DiagramaColaboracionPresentarExamen
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+skinparam ActorBackgroundColor white
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+hide members
+top to bottom direction
+
+actor ":Student" as estudiante
+
+control ":TakeAnExamController" as presentar
+control ":FinishedExamController" as Finalizado
+control ":AnswerQuestionController" as Crespuestas
+entity ":Exam" as Examen
+Entity ":Questions" as Pregunta
+Entity ":Results" as Resultado
+boundary ":AvailableExamView" as VerExamen
+boundary ":ExamView" as Ver
+boundary ":FinishExamView" as Finalizar
+
+estudiante --> VerExamen
+note on link
+    1: ViewAvailableExams()
+end note
+
+VerExamen --> Ver
+note on link
+    2: ViewExam()
+end note
+
+Ver --> presentar
+note on link
+    3: ChooseExam()
+end note
+
+presentar --> Examen
+note on link
+    4: AcceptInstructions()
+end note
+
+Examen --> Crespuestas
+note on link
+    5: AnswerQuestions()
+end note
+
+Crespuestas --> Pregunta
+note on link
+    6: SetAnswers()
+end note
+
+Examen --> Finalizado
+note on link
+    7: SendAnswers()
+end note
+
+presentar --> Finalizar
+note on link
+    8: ViewFinishExam()
+end note
+
+Finalizar --> Finalizado
+note on link
+    9: FinishExam()
+end note
+
+Pregunta --> Resultado
+note on link
+    10: SetResult()
+end note
+
+Finalizado --> Resultado
+note on link
+    11: GetResult()
+end note
