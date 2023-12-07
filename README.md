@@ -68,3 +68,6 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 ![EditarPerfil](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/EDITARPERFIL.png)
 
 ![CerrarSesion](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/CERRARSESION.png)
+
+
+# MODELO DE ANALISIS -------------
