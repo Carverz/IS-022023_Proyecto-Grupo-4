@@ -1,27 +1,28 @@
-@startuml DiagramaDeClasesDeAnalisis
-hide footbox
-hide link
-Actor Student
-boundary AvailableExamsView
-boundary ExamView
-boundary "FinishExamView" as EndExamView
-entity Exam
-entity Results
-entity Question
-control "FinishedExamController" as EndExamController
-control "TakeAnExamController" as PresentExamContoller
-control AnwswerQuestionController
+@startuml DiagramaColaboracionPresentarExamen
+skinparam EntityBackgroundColor white
+skinparam BoundaryBackgroundColor white
+skinparam ControlBackgroundColor white
+skinparam ActorBackgroundColor white
+skinparam noteBackgroundColor transparent
+skinparam noteBorderColor transparent
+hide members
+top to bottom direction
 
-Student  -- AvailableExamsView
-AvailableExamsView -- ExamView
-Exam -- EndExamController
-Question -- Results
-EndExamView -- PresentExamContoller
-EndExamView -- EndExamController
-EndExamController -- Results
-ExamView -- PresentExamContoller
-Exam -- AnwswerQuestionController
-AnwswerQuestionController -- Question
-PresentExamContoller -- Exam
+actor ":Student" as estudiante
+
+control ":TakeExamController" as presentar
+control ":AnswerQuestionController" as Responder
+entity ":Exam" as Examen
+boundary ":ExamView" as Ver
+Entity ":Results" as Resultado
+
+estudiante -- Ver
+Ver -- presentar
+presentar -- Examen
+presentar -- Responder
+Responder -- Examen
+Resultado --  presentar
+
+
 
 @enduml

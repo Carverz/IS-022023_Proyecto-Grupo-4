@@ -24,7 +24,6 @@ rectangle "Sistema de Cursos y Certificados" {
   (Presentar Examen)  --> (Responder Preguntas): <<Include>>
   (Presentar Examen) --> (Ver Resultados): <<Include>>
   U1--> (Modificar informacion de perfil)
-  (Presentar Examen) --> (Finalizar Examen): <<Include>>
 
 
   

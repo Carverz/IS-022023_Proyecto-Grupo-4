@@ -11,35 +11,55 @@ top to bottom direction
 actor ":Student" as estudiante
 
 control ":TakeExamController" as presentar
+control ":AnswerQuestionController" as Responder
 entity ":Exam" as Examen
 Entity ":Results" as Resultado
+entity ":Question" as Pregunta
 boundary ":ExamView" as Ver
 
 estudiante --> Ver
 note on link
     0: AcceptInstructions()
     1: TakeExam()
-    4: GetAnswer()
-    8: Back()
+    4: SetAnswer()
 end note
 
-Ver -- presentar
+Ver --> presentar
 note on link
     2: GetExam()
-    5: SetResult()
+    5: SetAnswer()
+    10: SetResult()
+
 end note
 
 presentar <-- presentar
 note on link
-    6: Back()
+    8: Back()
+    9: Next ()
 end note
 
-presentar -- Examen
+presentar --> Examen
 note on link
     3: getData()
 end note
 
-presentar -- Resultado
+presentar --> Resultado
 note on link
-    7: setResult()
+    11: setResult()
 end note
+
+presentar --> Responder
+note on link
+    6: SetAnswer()
+end note
+
+Responder --> Examen
+note on link
+    7: SetAnswer()
+end note
+
+Resultado -->  presentar
+note on link
+    11: ShowResults()
+end note
+
