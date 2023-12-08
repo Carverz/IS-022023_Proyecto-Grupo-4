@@ -10,67 +10,36 @@ top to bottom direction
 
 actor ":Student" as estudiante
 
-control ":TakeAnExamController" as presentar
-control ":FinishedExamController" as Finalizado
-control ":AnswerQuestionController" as Crespuestas
+control ":TakeExamController" as presentar
 entity ":Exam" as Examen
-Entity ":Questions" as Pregunta
 Entity ":Results" as Resultado
-boundary ":AvailableExamView" as VerExamen
 boundary ":ExamView" as Ver
-boundary ":FinishExamView" as Finalizar
 
-estudiante --> VerExamen
+estudiante --> Ver
 note on link
-    1: ViewAvailableExams()
+    0: AcceptInstructions()
+    1: TakeExam()
+    4: GetAnswer()
+    8: Back()
 end note
 
-VerExamen --> Ver
+Ver -- presentar
 note on link
-    2: ViewExam()
+    2: GetExam()
+    5: SetResult()
 end note
 
-Ver --> presentar
+presentar <-- presentar
 note on link
-    3: ChooseExam()
+    6: Back()
 end note
 
-presentar --> Examen
+presentar -- Examen
 note on link
-    4: AcceptInstructions()
+    3: getData()
 end note
 
-Examen --> Crespuestas
+presentar -- Resultado
 note on link
-    5: AnswerQuestions()
-end note
-
-Crespuestas --> Pregunta
-note on link
-    6: SetAnswers()
-end note
-
-Examen --> Finalizado
-note on link
-    7: SendAnswers()
-end note
-
-presentar --> Finalizar
-note on link
-    8: ViewFinishExam()
-end note
-
-Finalizar --> Finalizado
-note on link
-    9: FinishExam()
-end note
-
-Pregunta --> Resultado
-note on link
-    10: SetResult()
-end note
-
-Finalizado --> Resultado
-note on link
-    11: GetResult()
+    7: setResult()
 end note
