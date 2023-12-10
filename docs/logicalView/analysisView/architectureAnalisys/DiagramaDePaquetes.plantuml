@@ -1,0 +1,29 @@
+@startuml DiagramaPaquetes
+
+package "Model" as Modelo {
+class User
+class Course
+class Exam
+class Question
+class Result
+class Certificate
+}
+
+package "Controller" as Controlador{
+class TakeExamController
+class AnswerQuestionController
+class RequestCertificateController
+}
+
+package "View" as Vista{
+class StudentView
+class ExamView
+class RequestCertificateView
+}
+
+Modelo ... Controlador : acceso
+Controlador ... Vista : coordinación
+Vista .left.. Modelo : información
+
+
+@enduml
