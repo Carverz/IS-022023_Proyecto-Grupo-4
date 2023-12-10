@@ -71,3 +71,5 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 
 
 # MODELO DE ANALISIS -------------
+
+**Digrama de Casos de Uso**
