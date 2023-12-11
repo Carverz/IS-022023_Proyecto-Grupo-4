@@ -1,4 +1,4 @@
-@startuml DiagramaColaboracionPresentarExamen
+@startuml DiagramaClasesDeAnalisisPresentarExamen
 skinparam EntityBackgroundColor white
 skinparam BoundaryBackgroundColor white
 skinparam ControlBackgroundColor white
