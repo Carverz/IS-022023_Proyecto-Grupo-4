@@ -1,4 +1,4 @@
-@startuml DiagramaColaboracionSolicitarCertificado
+@startuml DiagramaClasesDeAnalisisSolicitarCertificado
 
 :Student: as o1
 
