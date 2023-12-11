@@ -28,15 +28,15 @@ Repositorio de Proyecto. Grupo #4
 
 # MODELO DE CASOS DE USO -------------
 
-**Digrama de Casos de Uso**
+**Diagrama de Casos de Uso**
 
 ![DiagramaCasosDeUso](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaCasosDeUsos/DiagramaCasosDeUsos.png)
 
-**Digrama de Casos de Uso Admin**
+**Diagrama de Casos de Uso Admin**
 
 ![DiagramaCasosDeUsoAdmin](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesAdmin/DiagramaDeEstadosDeUseCasesAdmin.png)
 
-**Digrama de Casos de Uso Alumno**
+**Diagrama de Casos de Uso Alumno**
 
 ![DiagramaCasosDeUsoAlumno](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/DiagramaDeEstadosDeUseCasesUsuario/DiagramaDeEstadosDeUseCasesUsuario.png)
 
@@ -72,4 +72,26 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 
 # MODELO DE ANALISIS -------------
 
-**Digrama de Casos de Uso**
+**Diagrama de Colaboracion Presentar Examen**
+
+![DiagramaColaboracionPresentarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/useCaseAnalysis/DiagramaColaboracionPresentarExamen/DiagramaColaboracionPresentarExamen.png)
+
+**Diagrama de Colaboracion Solicitar Certificado**
+
+![DiagramaDeColaboracionDeSolicitarCertificado](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/useCaseAnalysis/DiagramaDeColaboracionDeSolicitarCertificado/DiagramaDeColaboracionDeSolicitarCertificado.png)
+
+**Diagrama de Clases de Analisis Presentar Examen**
+
+![DiagramaClasesDeAnalisisPresentarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/classAnalysis/DiagramaClasesDeAnalisisPresentarExamen/DiagramaClasesDeAnalisisPresentarExamen.png)
+
+**Diagrama de Clases de Analisis Solicitar Certificado**
+
+![DiagramaClasesDeAnalisisSolicitarCertificado](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/classAnalysis/DiagramaClasesDeAnalisisSolicitarCertificado/DiagramaClasesDeAnalisisSolicitarCertificado.png)
+
+**Diagrama de Clases**
+
+![DiagramaClases](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/architectureAnalysis/DiagramaDeClases.plantuml)
+
+**Diagrama de Paquetes**
+
+![DiagramaPaquetes](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/packageAnalisys/DiagramaDePaquetes/DiagramaPaquetes.png)
