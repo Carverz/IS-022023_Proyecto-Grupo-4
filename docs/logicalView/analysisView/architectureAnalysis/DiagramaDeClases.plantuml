@@ -1,0 +1,86 @@
+@startuml DiagramaDeClasesGenerales
+
+class StudentView {}
+
+class Result
+{ 
+    -score 
+    -setScore() 
+}
+
+class User
+{ 
+    -name 
+    -lastName 
+    -email 
+    +getName() 
+    +getLastName() 
+    +getEmail() 
+}
+
+class Exam
+{ 
+    -question 
+    -answer 
+}
+
+class Question 
+{ 
+    -statement 
+    -answer 
+    +setAnswer() 
+}
+
+class AnswerQuestionController{}
+
+class TakeExamController
+{ 
+    +back() 
+    +next() 
+    +showQuestion(AnswerQuestionController) 
+}
+
+class ExamView
+{ 
+    +showExam(TakeExamController) 
+}
+
+class Course
+{ 
+    -name 
+    -nameProfessor 
+    +getName() 
+    +getNameProfessor() }
+
+class Certificate
+{
+    -NAME_STUDENT
+    -NAME_PROFESSOR
+    -NAME_COURSE
+    -RESULT
+    +write()
+}
+
+class RequestCertificate{}
+
+class RequestCertificateView
+{ 
+    -showCertificate(RequestCertificateView) 
+}
+
+StudentView *-- RequestCertificateView
+StudentView *-- ExamView
+RequestCertificateView-->RequestCertificate
+ExamView --> TakeExamController
+TakeExamController--> AnswerQuestionController
+RequestCertificate--> User
+RequestCertificate--> Course
+RequestCertificate-->Certificate
+User o-- Course
+Certificate o-- Course
+Certificate o-- User
+TakeExamController--> Exam
+TakeExamController--> Result
+AnswerQuestionController--> Question
+Exam o-- Question
+Exam o-- Result @enduml
