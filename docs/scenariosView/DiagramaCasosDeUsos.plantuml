@@ -16,7 +16,7 @@ rectangle "Sistema de Cursos y Certificados" {
   A --> (Modificar informacion de perfil)
   U1 --> (Iniciar Sesion)
   U1 --> (Cerrar Sesión)
-  U1 --> (Ver Documentación)
+  U1 --> (Ver Ayuda)
   U1 --> (Ver Lista de Cursos)
   U1 --> (Ver Lista de Exámenes)
   U1 --> (Ver Certificado)
