@@ -95,3 +95,7 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 **Diagrama de Paquetes**
 
 ![DiagramaPaquetes](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/analysisView/packageAnalisys/DiagramaDePaquetes/DiagramaPaquetes.png)
+
+# MODELO DE DISEÑO -------------
+
+**Diagrama de Clases de Diseño**
