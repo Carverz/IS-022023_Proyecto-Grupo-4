@@ -1,0 +1,45 @@
+@startuml  DiagramaClasesDisenio
+class Student{ 
+    -viewCertificate()  
+}  
+
+class RequestCertificateView{ 
+    -request() 
+    -showCertificate(certificate)  
+}  
+
+class RequestCertificate{  
+    -certificateData -createCertificate() 
+    -setCerticateData(User) 
+}
+
+class User{ 
+    -String name 
+    -String lastName 
+    -getCourse() 
+    -getData() 
+}  
+
+class Course{ 
+    -String name 
+    -String nameProfessor 
+    -getData() 
+}  
+
+class Certificate{ 
+    -String nameStuden 
+    -String nameProfessor 
+    -String nameCourse 
+    -String result  
+    -write(data) 
+}   
+
+Student-->RequestCertificateView 
+RequestCertificateView-->RequestCertificate 
+RequestCertificate-->User 
+RequestCertificate-->Course 
+RequestCertificate-->Certificate 
+User-- Course 
+Certificate-- Course 
+User-- Certificate  
+@enduml

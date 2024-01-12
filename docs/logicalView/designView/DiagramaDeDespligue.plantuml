@@ -1,0 +1,10 @@
+@startuml DiagramaDespliegue
+node PersonalComputer [
+    <b>Personal Computer
+    ----
+]
+
+component Javatech.jar
+
+PersonalComputer *--> Javatech.jar
+@enduml
