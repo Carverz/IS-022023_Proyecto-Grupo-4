@@ -104,11 +104,11 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 
 **Diagrama de Secuencia Casos de Uso**
 
-![DiagramaSecuencias]()
+![DiagramaSecuencias](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/designView/sequenceDiagram/DiagramaSecuencia.png)
 
 **Diagrama de Traza de las Clases**
 
-![DiagramaTraza]()
+![DiagramaTraza](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/designView/DiagramaTrazas/DiagramaTrazas.png)
 
 # MODELO DE DESPLIEGUE -------------
 
