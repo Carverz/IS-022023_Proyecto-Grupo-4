@@ -2,10 +2,22 @@
 
 package views{}
 package controllers{}
-package modelos{}
+package models{}
 
-views..>controllers
-controllers..>models
+views ..> controllers
+controllers ..> models
+
+package "View" as Vista {
+class StudentView
+class ExamView
+class RequestCertificateView
+}
+
+package "Controller" as Controlador {
+class TakeExamController
+class AnswerQuestionController
+class RequestCertificateController
+}
 
 package "Model" as Modelo {
 class User
@@ -16,20 +28,7 @@ class Result
 class Certificate
 }
 
-package "Controller" as Controlador{
-class TakeExamController
-class AnswerQuestionController
-class RequestCertificateController
-}
-
-package "View" as Vista{
-class StudentView
-class ExamView
-class RequestCertificateView
-}
-
-Vista..>Controlador
-Controlador..>Modelo 
-
+Vista ...> Controlador
+Controlador ...> Modelo
 
 @enduml
