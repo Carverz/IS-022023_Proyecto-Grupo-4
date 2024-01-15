@@ -1,6 +1,6 @@
 @startuml DiagramaDeClasesGenerales
 
-class StudentView {}
+class CourseView {}
 
 class Result
 { 
@@ -33,16 +33,14 @@ class Question
 
 class AnswerQuestionController{}
 
-class TakeExamController
-{ 
-    +back() 
-    +next() 
-    +showQuestion(AnswerQuestionController) 
-}
+class TakeExamController{}
 
 class ExamView
 { 
     +showExam(TakeExamController) 
++back() 
+    +next() 
+    +showQuestion(AnswerQuestionController) 
 }
 
 class Course
@@ -50,14 +48,15 @@ class Course
     -name 
     -nameProfessor 
     +getName() 
-    +getNameProfessor() }
+    +getNameProfessor() 
+    }
 
 class Certificate
 {
-    -NAME_STUDENT
-    -NAME_PROFESSOR
-    -NAME_COURSE
-    -RESULT
+    -nameStudent
+    -nameProfessor
+    -nameCourse
+    -result
     +write()
 }
 
@@ -67,20 +66,37 @@ class RequestCertificateView
 { 
     -showCertificate(RequestCertificateView) 
 }
+class Answer{}
 
-StudentView *-- RequestCertificateView
-StudentView *-- ExamView
+class MenuBar{
++house()
++frequentQ()
++help()
++search()
+}
+
+CourseView *-- RequestCertificateView
+CourseView *-- ExamView
 RequestCertificateView-->RequestCertificate
 ExamView --> TakeExamController
 TakeExamController--> AnswerQuestionController
 RequestCertificate--> User
 RequestCertificate--> Course
 RequestCertificate-->Certificate
-User o-- Course
-Certificate o-- Course
-Certificate o-- User
+User --> Course
+Certificate --> Course
+Certificate --> User
+
 TakeExamController--> Exam
 TakeExamController--> Result
 AnswerQuestionController--> Question
-Exam o-- Question
-Exam o-- Result @enduml
+Exam --> Question
+Exam --> Result
+User --> Result
+User --> Question
+User --> Answer
+Question --> Answer
+ExamView *-- MenuBar
+RequestCertificateView *-- MenuBar
+
+ @enduml
