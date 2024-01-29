@@ -9,26 +9,26 @@ entity Course
 
 
 activate Student
-Student -> RequestCertificateView: view_certificate()
+Student -> RequestCertificateView: viewCertificate()
 activate RequestCertificateView
 RequestCertificateView -> RequestCertificateController: request(user)
 activate RequestCertificateController
-RequestCertificateController -> User: get_user_data(user)
+RequestCertificateController -> User: getUserData(user)
 activate User
-User -> Course: get_course_data(courseID)
+User -> Course: getCourseData(courseID)
 activate Course
-Course --> User: course_data
+Course --> User: courseData
 deactivate Course
-User --> RequestCertificateController: user_data
+User --> RequestCertificateController: userData
 deactivate User
 RequestCertificateController -> Certificate: new Certificate()
 activate Certificate
-RequestCertificateController -> Certificate: write_data(user_data)
+RequestCertificateController -> Certificate: writeData(userData)
 Certificate --> RequestCertificateController: certificate
 deactivate Certificate
 RequestCertificateController --> RequestCertificateView: certificate
 deactivate RequestCertificateController
-RequestCertificateView --> RequestCertificateView: show_certificate(certificate)
+RequestCertificateView --> RequestCertificateView: showCertificate(certificate)
 
 
 @enduml
