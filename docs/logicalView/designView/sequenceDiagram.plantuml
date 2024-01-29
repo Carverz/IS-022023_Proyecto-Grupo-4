@@ -1,37 +1,34 @@
 @startuml DiagramaSecuencia
 
 actor Student
-entity RequestCertificateView
-entity RequestCertificate
+boundary RequestCertificateView
+control RequestCertificateController
 entity User
 entity Certificate
 entity Course
 
 
 activate Student
-Student -> RequestCertificateView: view_certificate()
+Student -> RequestCertificateView: viewCertificate()
 activate RequestCertificateView
-RequestCertificateView -> RequestCertificate: request(user)
-activate RequestCertificate
-RequestCertificate -> User: set_certificate_data(user)
+RequestCertificateView -> RequestCertificateController: request(user)
+activate RequestCertificateController
+RequestCertificateController -> User: getUserData(user)
 activate User
-User -> User: get_data()
-User --> RequestCertificate: user_data
-User -> Course: get_data()
+User -> Course: getCourseData(courseID)
 activate Course
-Course -> Course: get_data()
-Course --> User: course_data
+Course --> User: courseData
 deactivate Course
-User --> RequestCertificate: course_data
+User --> RequestCertificateController: userData
 deactivate User
-RequestCertificate -> Certificate: createCertificate()
+RequestCertificateController -> Certificate: new Certificate()
 activate Certificate
-Certificate -> Certificate: write_data(user_data, course_data)
-Certificate --> RequestCertificate: certificate
+RequestCertificateController -> Certificate: writeData(userData)
+Certificate --> RequestCertificateController: certificate
 deactivate Certificate
-RequestCertificate --> RequestCertificateView: certificate
-deactivate RequestCertificate
-RequestCertificateView --> Student: show_certificate(certificate)
-deactivate RequestCertificateView
+RequestCertificateController --> RequestCertificateView: certificate
+deactivate RequestCertificateController
+RequestCertificateView --> RequestCertificateView: showCertificate(certificate)
+
 
 @enduml
