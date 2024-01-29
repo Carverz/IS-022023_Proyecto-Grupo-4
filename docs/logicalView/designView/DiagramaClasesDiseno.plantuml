@@ -1,29 +1,35 @@
 @startuml  DiagramaClasesDisenio
-class Student{ 
-    -viewCertificate()  
+
+class RequestCertificateView<<Jframe>>{ 
+    -button: Jbutton 
+    -image: Jpanel
+    -menubar
 }  
 
-class RequestCertificateView{ 
-    -request() 
-    -showCertificate(certificate)  
-}  
 
-class RequestCertificate{  
-    -certificateData -createCertificate() 
-    -setCerticateData(User) 
+class Menubar<<Jmenubar>>{
+-button: Jbutton
+-tittle: Jlabel
+-icon: Jpanel
+}
+
+
+class RequestCertificateController{  
+    -String certificateData 
+    -Void writeData(userData) 
+    -String getUserData(User) 
 }
 
 class User{ 
     -String name 
-    -String lastName 
-    -getCourse() 
-    -getData() 
+    -String lastName
+    -String courseID 
+    -String getCourseData(courseID) 
 }  
 
 class Course{ 
     -String name 
     -String nameProfessor 
-    -getData() 
 }  
 
 class Certificate{ 
@@ -31,15 +37,16 @@ class Certificate{
     -String nameProfessor 
     -String nameCourse 
     -String result  
-    -write(data) 
+    -Void write(data) 
 }   
 
-Student-->RequestCertificateView 
-RequestCertificateView-->RequestCertificate 
-RequestCertificate-->User 
-RequestCertificate-->Course 
-RequestCertificate-->Certificate 
+RequestCertificateView-->RequestCertificateController 
+RequestCertificateView--Menubar
+RequestCertificateController-->User 
+RequestCertificateController---->Course 
+RequestCertificateController------>Certificate 
 User-- Course 
 Certificate-- Course 
 User-- Certificate  
+
 @enduml
