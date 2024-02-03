@@ -5,6 +5,7 @@ public class User{
     private String courseId;
 
     User(){};
+
     User(String name, String mail, String password, String courseId){
         this.name = name;
         this.password = password;
@@ -13,16 +14,16 @@ public class User{
     }
 
     
-    public String getCourseData(User usuario){
+    public String getCourseData(){
         return this.courseId;
     }
-    public String getPassword(User usuario){
+    public String getPassword(){
         return this.password;
     }
-    public String getMail(User usuario){
+    public String getMail(){
         return this.mail;
     }
-    public String getName(User usuario){
+    public String getName(){
         return this.name;
     }
 }
