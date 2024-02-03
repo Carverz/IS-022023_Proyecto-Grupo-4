@@ -177,8 +177,9 @@ public class UserInterface extends JFrame {
             @Override
             public void run() {
                 User ui = new User();
-                ui.name;
-                ui.lastName;
+                ui.name = "Carlos";
+                ui.lastName = "Zavarce";
+                ui.email = "";
             }
         });
     }
