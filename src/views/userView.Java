@@ -1,10 +1,11 @@
+package views;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList; 
 
-public class UserInterface extends JFrame {
+public class userView extends JFrame {
 
     private JLabel usernameLabel;
     private JLabel emailLabel;
@@ -12,7 +13,7 @@ public class UserInterface extends JFrame {
     private JTextField emailField;
     private JLabel userImageLabel;
 
-    public UserInterface() {
+    public userView() {
     
         setTitle("Perfil");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -170,17 +171,5 @@ public class UserInterface extends JFrame {
             bottomPanel.add(certificateButton);
         }
         add(bottomPanel, BorderLayout.SOUTH);
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                User ui = new User();
-                ui.name = "Carlos";
-                ui.lastName = "Zavarce";
-                ui.email = "email";
-            }
-        });
     }
 }
