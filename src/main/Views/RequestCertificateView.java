@@ -188,7 +188,8 @@ public class RequestCertificateView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ","EMAIL","ZARVACE",0);
+             int[] num ={1}; 
+                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ","EMAIL","ZARVACE",num);
                 Course curso = new Course("Lenguaje de Programación Java: Nivel Basico"); 
                 RequestCertificateController control = new RequestCertificateController(usuar,curso,"10/12/2023");
                RequestCertificateView Certificate = new RequestCertificateView(control);
