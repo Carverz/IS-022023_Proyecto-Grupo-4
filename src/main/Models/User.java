@@ -5,24 +5,24 @@ public class User{
     private String courseId;
 
     User(){};
-    User(String _name, String _mail, String _password, String _courseId){
-        name = _name;
-        password = _password;
-        mail = _mail;
-        courseId = _courseId;
+    User(String name, String mail, String password, String courseId){
+        this.name = name;
+        this.password = password;
+        this.mail = mail;
+        this.courseId = courseId;
     }
 
     
     public String getCourseData(User usuario){
-        return usuario.courseId;
+        return this.courseId;
     }
     public String getPassword(User usuario){
-        return usuario.password;
+        return this.password;
     }
     public String getMail(User usuario){
-        return usuario.mail;
+        return this.mail;
     }
     public String getName(User usuario){
-        return usuario.name;
+        return this.name;
     }
 }
