@@ -2,11 +2,11 @@ public class User{
     private String name;
     private String mail;
     private String password;
-    private String courseId;
+    private int[] courseId;
 
-    User(){};
+    public User(){};
 
-    User(String name, String mail, String password, String courseId){
+    public User(String name, String mail, String password, int[] courseId){
         this.name = name;
         this.password = password;
         this.mail = mail;
@@ -14,7 +14,7 @@ public class User{
     }
 
     
-    public String getCourseData(){
+    public int[] getCourseData(){
         return this.courseId;
     }
     public String getPassword(){
