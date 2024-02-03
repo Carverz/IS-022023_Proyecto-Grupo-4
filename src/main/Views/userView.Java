@@ -113,7 +113,7 @@ public class userView extends JFrame {
         Image iconImage = icon.getImage();
         setIconImage(iconImage);
 
-        // Configura los campos de texto con los datos del usuario
+ 
         setUsername(user.getName());
         setEmail(user.getMail());
     }
