@@ -179,7 +179,7 @@ public class UserInterface extends JFrame {
                 User ui = new User();
                 ui.name = "Carlos";
                 ui.lastName = "Zavarce";
-                ui.email = "";
+                ui.email = "email";
             }
         });
     }
