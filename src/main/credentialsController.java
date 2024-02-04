@@ -6,13 +6,16 @@ import java.io.IOException;
 
 public class credentialsController{
 
-    public boolean checkCredentials(String username, String password) {
+    public boolean checkCredentials(String username, String password, boolean admin) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("Credenciales.txt"));
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] credentials = line.split(",");
-                if (credentials.length == 2 && credentials[0].equals(username) && credentials[1].equals(password)) {
+                if (credentials.length == 3 && credentials[0].equals(username) && credentials[1].equals(password)) {
+                    if(credentials[2].equals("admin")){
+                        admin = true;
+                    }
                     reader.close();
                     return true;
                 }

@@ -70,15 +70,15 @@ public class LoginView extends JFrame {
         loginButton.setBackground(new Color(0x2271B3));
         loginButton.setForeground(Color.WHITE);
         loginButton.setFont(new Font("Bebas Neue", Font.BOLD, 20));
+        String username = usernameField.getText();
+        String password = new String(passwordField.getPassword());
+        boolean admin = false;
         loginButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                String username = usernameField.getText();
-                String password = new String(passwordField.getPassword());
+            public void actionPerformed(ActionEvent e) {               
                 credentialsController credenciales = new credentialsController();
-
-                if (credenciales.checkCredentials(username, password)) {
-                    JOptionPane.showMessageDialog(null, "Inicio de sesion exitoso");
+                if (credenciales.checkCredentials(username, password, admin)) {
+                    //JOptionPane.showMessageDialog(null, "Inicio de sesion exitoso");
                     // Agrega aqui la logica adicional que deseas realizar despues del inicio de sesion exitoso
                 } else {
                     JOptionPane.showMessageDialog(null, "Credenciales invalidas. Por favor, intentalo de nuevo.");
