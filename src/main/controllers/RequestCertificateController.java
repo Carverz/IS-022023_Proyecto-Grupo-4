@@ -1,8 +1,8 @@
 
-package controller;
+package main.Controllers;
 
-import model.User;
-import model.Course;
+import Models.User;
+import Models.Course;
 
 public class RequestCertificateController {
     private User usuario;

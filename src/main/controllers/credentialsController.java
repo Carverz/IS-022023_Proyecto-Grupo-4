@@ -1,4 +1,4 @@
-package controllers;
+package main.Controllers;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

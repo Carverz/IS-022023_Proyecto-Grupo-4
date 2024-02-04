@@ -1,11 +1,10 @@
 
- 
-package view;
+package main.Views;
 
 import java.awt.Color;
-import controller.RequestCertificateController;
-import model.User;
-import model.Course;
+import Controllers.RequestCertificateController;
+import Models.User;
+import Models.Course;
 
 
 public class RequestCertificateView extends javax.swing.JFrame {
