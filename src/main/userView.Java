@@ -1,6 +1,7 @@
 //package main.Views;
 
-import models.User;
+//import models.User;
+import User;
 
 import javax.swing.*;
 import java.awt.*;
