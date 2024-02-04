@@ -1,9 +1,9 @@
-package main.Views;
+//package main.Views;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import controllers.credentialsController;
+//import controllers.credentialsController;
 
 public class LoginView extends JFrame {
     private JTextField usernameField;
