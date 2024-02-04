@@ -1,3 +1,4 @@
+package main;
 //package main.Views;
 
 //import models.User;
@@ -100,13 +101,33 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                UserView userView = new UserView(user);
+                userView.setVisible(true);
+                dispose(); 
             }
         });
 
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+
+                LogOut logOut = new LogOut();
+                logOut.setVisible(true);
+                dispose(); 
+            }
+        });
+
+        homeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Agregar la lógica para la acción del botón "Inicio" aquí
+            }
+        });
+
+        helpButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Agregar la lógica para la acción del botón "Ayuda!!!" aquí
             }
         });
 

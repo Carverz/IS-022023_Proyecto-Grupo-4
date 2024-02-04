@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import UserView;
 
 public class courseView extends JFrame {
     public courseView(User user) {
@@ -25,13 +26,19 @@ public class courseView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                UserView userView = new UserView(user);
+                userView.setVisible(true);
+                dispose(); 
             }
         });
 
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+
+                LogOut logOut = new LogOut();
+                logOut.setVisible(true);
+                dispose(); 
             }
         });
 
