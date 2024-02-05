@@ -1,7 +1,7 @@
 
 package main;
-import Course;
-import User;
+import main.Course;
+import main.User;
 
 public class HomeController {
     private User usuario;
