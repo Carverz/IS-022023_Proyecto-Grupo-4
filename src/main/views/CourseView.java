@@ -1,5 +1,5 @@
+package main.views;
 /* 
-package main;
 
 
 import main.controllers.CourseController;
