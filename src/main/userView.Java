@@ -2,7 +2,7 @@ package main;
 //package main.Views;
 
 //import models.User;
-import User;
+import main.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -101,8 +101,8 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                UserView userView = new UserView(user);
-                userView.setVisible(true);
+                userView UserView = new userView(user);
+                UserView.setVisible(true);
                 dispose(); 
             }
         });
@@ -111,8 +111,8 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                LogOut logOut = new LogOut();
-                logOut.setVisible(true);
+                logOut LogOut = new logOut();
+                LogOut.setVisible(true);
                 dispose(); 
             }
         });
@@ -120,14 +120,20 @@ public class userView extends JFrame {
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Agregar la lógica para la acción del botón "Inicio" aquí
+              
+                homeView HomeView = new homeView();
+                HomeView.setVisible(true);
+                dispose(); 
             }
         });
 
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Agregar la lógica para la acción del botón "Ayuda!!!" aquí
+
+                helpView HelpView = new helpView(user);
+                HelpView.setVisible(true);
+                dispose(); 
             }
         });
 

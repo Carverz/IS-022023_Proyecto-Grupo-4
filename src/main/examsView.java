@@ -5,9 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class courseView extends JFrame {
-    
-    public courseView(User user, courseController controller) {
+public class examsView extends JFrame {
+        private examsController controller;
+
+        public examsView(User user, examsController controller) {
+        this.controller = controller;
 
         setTitle("Perfil");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -59,51 +61,26 @@ public class courseView extends JFrame {
             }
         });
 
-        // Agregar botones al panel superior
         topPanel.add(profileButton, BorderLayout.WEST);
         topPanel.add(logoutButton, BorderLayout.EAST);
         topPanel.add(homeButton, BorderLayout.CENTER);
         topPanel.add(helpButton, BorderLayout.SOUTH);
 
-        // Agregar panel superior al JFrame
         add(topPanel, BorderLayout.NORTH);
 
-        // Mostrar la información del curso
-        Course course = controller.getCourse();
-        JPanel courseInfoPanel = new JPanel();
-        courseInfoPanel.setLayout(new BoxLayout(courseInfoPanel, BoxLayout.Y_AXIS));
-
-        JLabel nameLabel = new JLabel(course.getName());
-        nameLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        courseInfoPanel.add(nameLabel);
-
-        JTextArea descriptionArea = new JTextArea(course.getDescription());
-        descriptionArea.setEditable(false);
-        descriptionArea.setLineWrap(true);
-        descriptionArea.setWrapStyleWord(true);
-        JScrollPane descriptionScrollPane = new JScrollPane(descriptionArea);
-        descriptionScrollPane.setPreferredSize(new Dimension(250, 150));
-        courseInfoPanel.add(descriptionScrollPane);
-
-        // Agregar panel de información del curso a la izquierda
-        add(courseInfoPanel, BorderLayout.CENTER);
-
-        // Mostrar la imagen del curso
-        JLabel imageLabel = new JLabel(new ImageIcon(course.getImage()));
-        add(imageLabel, BorderLayout.EAST);
-
-        // Agregar botón "Ver exámenes" debajo de la imagen del curso
-        JButton viewExamsButton = new JButton("Ver exámenes");
-        viewExamsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                examsView ExamsView = new examsView(user, controller);
-                ExamsView.setVisible(true);
-                dispose(); 
-            }
-        });
-        JPanel examsButtonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        examsButtonPanel.add(viewExamsButton);
-        add(examsButtonPanel, BorderLayout.SOUTH);
-    }
+       // Crear botones para los exámenes
+       Exam[] exams = controller.getExams();
+       JPanel examsPanel = new JPanel(new GridLayout(exams.length, 1));
+       for (Exam exam : exams) {
+           JButton examButton = new JButton(exam.getName());
+           examButton.addActionListener(new ActionListener() {
+               @Override
+               public void actionPerformed(ActionEvent e) {
+                   // Lógica para el botón del examen si es necesario
+               }
+           });
+           examsPanel.add(examButton);
+       }
+       add(examsPanel, BorderLayout.CENTER);
+   }
 }
