@@ -1,9 +1,9 @@
-/* 
-package main;
+
+package main.views;
 import javax.swing.*;
-import HomeController;
-import Course;
-import User;
+import main.controllers.HomeController;
+import main.models.Course;
+import main.models.User;
 
 
 public class HomeView extends javax.swing.JFrame {
@@ -270,7 +270,7 @@ public class HomeView extends javax.swing.JFrame {
             }
         });
     }*/
-/* 
+
 private javax.swing.JButton[] cour;   
 private HomeController controller;
     // Variables declaration - do not modify                     
@@ -293,4 +293,3 @@ private HomeController controller;
     // End of variables declaration                   
 }
 
-*/

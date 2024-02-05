@@ -1,6 +1,5 @@
 package main.views;
 
-//package views;
 
 import javax.swing.*;
 import java.awt.*;
