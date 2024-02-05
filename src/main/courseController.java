@@ -1,9 +1,9 @@
 package main;
 
-public class courseController {
+public class CourseController {
     private Course course;
     
-    public courseController(Course course) {
+    public CourseController(Course course) {
         this.course = course;
     }
     

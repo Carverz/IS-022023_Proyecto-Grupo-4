@@ -5,9 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class courseView extends JFrame {
+public class CourseView extends JFrame {
     
-    public courseView(User user, courseController controller) {
+    public CourseView(User user, CourseController controller) {
 
         setTitle("Perfil");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,8 +26,8 @@ public class courseView extends JFrame {
         profileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                userView UserView = new userView(user);
-                UserView.setVisible(true);
+                UserView userView = new UserView(user);
+                userView.setVisible(true);
                 dispose(); 
             }
         });
@@ -35,8 +35,8 @@ public class courseView extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                logOut LogOut = new logOut();
-                LogOut.setVisible(true);
+                LogOut logOut = new LogOut();
+                logOut.setVisible(true);
                 dispose(); 
             }
         });
@@ -44,8 +44,8 @@ public class courseView extends JFrame {
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                homeView HomeView = new homeView();
-                HomeView.setVisible(true);
+                HomeView homeView = new HomeView();
+                homeView.setVisible(true);
                 dispose(); 
             }
         });
@@ -53,8 +53,8 @@ public class courseView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                helpView HelpView = new helpView(user);
-                HelpView.setVisible(true);
+                HelpView helpView = new HelpView(user);
+                helpView.setVisible(true);
                 dispose(); 
             }
         });
@@ -97,8 +97,8 @@ public class courseView extends JFrame {
         viewExamsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                examsView ExamsView = new examsView(user, controller);
-                ExamsView.setVisible(true);
+                ExamsView examsView = new ExamsView(user,  controller);
+                examsView.setVisible(true);
                 dispose(); 
             }
         });

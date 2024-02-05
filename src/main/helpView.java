@@ -5,9 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class helpView extends JFrame {
+public class HelpView extends JFrame {
 
-    public helpView(User user) {
+    public HelpView(User user) {
 
 
         setTitle("Perfil");
@@ -27,8 +27,8 @@ public class helpView extends JFrame {
         profileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                userView UserView = new userView(user);
-                UserView.setVisible(true);
+                UserView userView = new UserView(user);
+                userView.setVisible(true);
                 dispose(); 
             }
         });
@@ -36,7 +36,7 @@ public class helpView extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                logOut LogOut = new logOut();
+                LogOut LogOut = new LogOut();
                 LogOut.setVisible(true);
                 dispose(); 
             }
@@ -45,8 +45,8 @@ public class helpView extends JFrame {
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                homeView HomeView = new homeView();
-                HomeView.setVisible(true);
+                HomeView homeView = new HomeView();
+                homeView.setVisible(true);
                 dispose(); 
             }
         });
@@ -54,8 +54,8 @@ public class helpView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                helpView HelpView = new helpView(user);
-                HelpView.setVisible(true);
+                HelpView helpView = new HelpView(user);
+                helpView.setVisible(true);
                 dispose(); 
             }
         });

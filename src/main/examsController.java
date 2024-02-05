@@ -1,9 +1,9 @@
 package main;
 
-public class examsController {
+public class ExamsController {
     private Exam[] exams;
     
-    public examsController(Exam[] exams) {
+    public ExamsController(Exam[] exams) {
         this.exams = exams;
     }
     

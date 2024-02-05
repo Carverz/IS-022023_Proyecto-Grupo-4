@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class userView extends JFrame {
+public class UserView extends JFrame {
 
     private JLabel usernameLabel;
     private JLabel emailLabel;
@@ -18,7 +18,7 @@ public class userView extends JFrame {
     private JTextField emailField;
     private JLabel userImageLabel;
 
-    public userView(User user) {
+    public UserView(User user) {
 
         setTitle("Perfil");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,8 +101,8 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                userView UserView = new userView(user);
-                UserView.setVisible(true);
+                UserView userView = new UserView(user);
+                userView.setVisible(true);
                 dispose(); 
             }
         });
@@ -111,8 +111,8 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                logOut LogOut = new logOut();
-                LogOut.setVisible(true);
+                LogOut logOut = new LogOut();
+                logOut.setVisible(true);
                 dispose(); 
             }
         });
@@ -121,8 +121,8 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
               
-                homeView HomeView = new homeView();
-                HomeView.setVisible(true);
+                HomeView homeView = new HomeView();
+                HomeViewomeView.setVisible(true);
                 dispose(); 
             }
         });
@@ -131,8 +131,8 @@ public class userView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                helpView HelpView = new helpView(user);
-                HelpView.setVisible(true);
+                HelpView helpView = new HelpView(user);
+                helpView.setVisible(true);
                 dispose(); 
             }
         });

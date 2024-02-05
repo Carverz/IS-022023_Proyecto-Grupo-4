@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class credentialsController{
+public class CredentialsController{
 
     public boolean checkCredentials(String username, String password, boolean admin) {
         try {

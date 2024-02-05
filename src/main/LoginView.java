@@ -78,7 +78,7 @@ public class LoginView extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {               
-                credentialsController credenciales = new credentialsController();
+                CredentialsController credenciales = new CredentialsController();
                 if (credenciales.checkCredentials(username, password, admin)) {
                     //JOptionPane.showMessageDialog(null, "Inicio de sesion exitoso");
                     // Agrega aqui la logica adicional que deseas realizar despues del inicio de sesion exitoso

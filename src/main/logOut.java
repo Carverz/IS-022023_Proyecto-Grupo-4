@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class logOut extends JFrame {
+public class LogOut extends JFrame {
 
-    public logOut() {
+    public LogOut() {
         setTitle("Cerrar Sesión");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
