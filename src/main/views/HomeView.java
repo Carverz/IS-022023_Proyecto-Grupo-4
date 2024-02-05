@@ -2,8 +2,6 @@
 package main.views;
 import javax.swing.*;
 import main.controllers.HomeController;
-import main.models.Course;
-import main.models.User;
 
 
 public class HomeView extends javax.swing.JFrame {
