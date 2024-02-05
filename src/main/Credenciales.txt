@@ -1,3 +1,0 @@
-Brhandon,Palomo,admin
-Carlos,Zavarce,user
-Luis,D'Antuano,user

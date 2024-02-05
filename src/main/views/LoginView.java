@@ -1,14 +1,11 @@
-package main;
-
-//package main.Views;
+package main.views;
 
 import javax.swing.*;
-
-import main.controllers.CredentialsController;
-
 import java.awt.*;
 import java.awt.event.*;
-//import controllers.credentialsController;
+import main.controllers.credentialsController;
+import main.controllers.HomeController;
+import main.models.User;
 
 public class LoginView extends JFrame {
     private JTextField usernameField;
@@ -21,7 +18,7 @@ public class LoginView extends JFrame {
         setResizable(false);
         setSize(1280, 720);
         setLocationRelativeTo(null);
-        ImageIcon image = new ImageIcon("Logo.png");
+        ImageIcon image = new ImageIcon("src\\Logo.png");
         setIconImage(image.getImage());
 
         JPanel panel = new JPanel();
@@ -75,18 +72,21 @@ public class LoginView extends JFrame {
         loginButton.setBackground(new Color(0x2271B3));
         loginButton.setForeground(Color.WHITE);
         loginButton.setFont(new Font("Bebas Neue", Font.BOLD, 20));
-        String username = usernameField.getText();
-        String password = new String(passwordField.getPassword());
         boolean admin = false;
+
         loginButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {               
-                CredentialsController credenciales = new CredentialsController();
-                if (credenciales.checkCredentials(username, password, admin)) {
-                    //JOptionPane.showMessageDialog(null, "Inicio de sesion exitoso");
-                    // Agrega aqui la logica adicional que deseas realizar despues del inicio de sesion exitoso
+            public void actionPerformed(ActionEvent e) {
+                String username = usernameField.getText();
+                String password = new String(passwordField.getPassword());
+                credentialsController check = new credentialsController();
+                int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
+                User usuario = new User("Luis",username,password,cursos);
+                HomeController homeController = new HomeController(usuario);
+
+                if (check.checkCredentials(username, password)) {
                 } else {
-                    JOptionPane.showMessageDialog(null, "Credenciales invalidas. Por favor, intentalo de nuevo.");
+                    JOptionPane.showMessageDialog(LoginView.this, "Error: correo o contrasenia incorrectos");
                 }
             }
         });
@@ -106,6 +106,7 @@ public class LoginView extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
+            @Override   
             public void run() {
                 new LoginView();
             }

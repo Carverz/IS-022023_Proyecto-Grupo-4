@@ -3,7 +3,7 @@ package main.views;
 
 import javax.swing.*;
 
-import main.views.LogOut;
+//import main.views.LogOut;
 import main.models.User;
 
 import java.awt.*;
@@ -112,8 +112,8 @@ public class UserView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                LogOut logOut = new LogOut();
-                logOut.setVisible(true);
+                //LogOut logOut = new LogOut();
+                //logOut.setVisible(true);
                 dispose(); 
             }
         });
