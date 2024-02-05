@@ -1,4 +1,4 @@
-package main;
+package main.controllers;
 //package main.Controllers;
 
 import java.io.BufferedReader;

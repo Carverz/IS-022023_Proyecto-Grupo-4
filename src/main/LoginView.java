@@ -3,6 +3,9 @@ package main;
 //package main.Views;
 
 import javax.swing.*;
+
+import main.controllers.CredentialsController;
+
 import java.awt.*;
 import java.awt.event.*;
 //import controllers.credentialsController;
