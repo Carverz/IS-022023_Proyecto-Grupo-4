@@ -1,6 +1,12 @@
 /* 
 package main;
 
+
+import main.views.UserView;
+
+
+import main.models.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -1,10 +1,11 @@
-package main;
+package main.views;
 //package main.Views;
 
-//import models.User;
-import main.User;
-
 import javax.swing.*;
+
+import main.LogOut;
+import main.models.User;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

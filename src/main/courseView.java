@@ -1,9 +1,11 @@
 /* 
 package main;
 
-import javax.swing.*;
+
+import main.controllers.CourseController;
 import java.awt.*;
-import java.awt.event.ActionEvent;
+import java.awt.event.Ac
+import main.views.UserView;tionEvent;
 import java.awt.event.ActionListener;
 
 public class CourseView extends JFrame {

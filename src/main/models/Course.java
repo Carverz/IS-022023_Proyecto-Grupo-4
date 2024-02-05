@@ -1,4 +1,4 @@
-package main;
+package main.models;
 
 public class Course {
     String name;

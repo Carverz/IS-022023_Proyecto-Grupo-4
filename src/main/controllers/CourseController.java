@@ -1,4 +1,6 @@
-package main;
+package main.controllers;
+
+import main.models.Course;
 
 public class CourseController {
     private Course course;
