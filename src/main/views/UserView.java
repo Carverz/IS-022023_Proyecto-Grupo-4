@@ -3,7 +3,7 @@ package main.views;
 
 import javax.swing.*;
 
-import main.LogOut;
+import main.views.LogOut;
 import main.models.User;
 
 import java.awt.*;

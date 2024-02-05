@@ -1,10 +1,11 @@
-package main;
+package main.views;
 
 //package views;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import main.LoginView;
 
 public class LogOut extends JFrame {
 
