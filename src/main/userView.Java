@@ -116,7 +116,7 @@ public class UserView extends JFrame {
                 dispose(); 
             }
         });
-
+/* 
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -135,7 +135,7 @@ public class UserView extends JFrame {
                 helpView.setVisible(true);
                 dispose(); 
             }
-        });
+        });*/
 
         ImageIcon icon = new ImageIcon("C:\\Users\\cezav\\OneDrive\\Escritorio\\IS-022023_Proyecto-Grupo-4\\src\\JavaTech_logo.jpg");
         Image iconImage = icon.getImage();

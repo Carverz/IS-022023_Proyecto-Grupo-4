@@ -1,3 +1,4 @@
+/* 
 package main;
 
 import javax.swing.*;
@@ -44,7 +45,7 @@ public class CourseView extends JFrame {
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HomeView homeView = new HomeView();
+                HomeView homeView = new HomeView(controller);
                 homeView.setVisible(true);
                 dispose(); 
             }
@@ -107,3 +108,4 @@ public class CourseView extends JFrame {
         add(examsButtonPanel, BorderLayout.SOUTH);
     }
 }
+*/

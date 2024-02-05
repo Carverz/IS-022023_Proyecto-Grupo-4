@@ -1,3 +1,4 @@
+/* 
 package main;
 
 import javax.swing.*;
@@ -84,3 +85,4 @@ public class ExamsView extends JFrame {
        add(examsPanel, BorderLayout.CENTER);
    }
 }
+*/

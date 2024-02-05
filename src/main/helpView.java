@@ -1,3 +1,4 @@
+/* 
 package main;
 
 import javax.swing.*;
@@ -63,3 +64,4 @@ public class HelpView extends JFrame {
         
     }
 }
+*/
