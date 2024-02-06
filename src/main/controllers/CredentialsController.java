@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
-public class credentialsController{
+public class CredentialsController{
     public boolean checkCredentials(String correo, String contrasenia) {
         try (BufferedReader reader = new BufferedReader(new FileReader("Credenciales.txt"))) {
             String line;

@@ -3,7 +3,7 @@ package main.views;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import main.controllers.credentialsController;
+import main.controllers.CredentialsController;
 import main.controllers.HomeController;
 import main.models.User;
 
@@ -79,7 +79,7 @@ public class LoginView extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String username = usernameField.getText();
                 String password = new String(passwordField.getPassword());
-                credentialsController check = new credentialsController();
+                CredentialsController check = new CredentialsController();
                 int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
                 User usuario = new User("Luis",username,password,cursos);
                 HomeController homeController = new HomeController(usuario);
