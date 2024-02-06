@@ -2,6 +2,8 @@
 package main.views;
 import javax.swing.*;
 import main.controllers.HomeController;
+import main.models.Course;
+import main.models.User;
 
 
 public class HomeView extends javax.swing.JFrame {
@@ -31,7 +33,7 @@ public class HomeView extends javax.swing.JFrame {
 
   
    // @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -57,7 +59,7 @@ public class HomeView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/javatech.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/image/javatech.png")));
         jLabel1.setText("jLabel1");
 
         jButton1.setEnabled(false);
@@ -212,28 +214,28 @@ public class HomeView extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
        
-    }                                        
+    }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }                                        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-    }                                         
+    }//GEN-LAST:event_jButton12ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-    }                                         
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-   /* public static void main(String args[]) {
+    public static void main(String args[]) {
     
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -267,11 +269,11 @@ public class HomeView extends javax.swing.JFrame {
                 home.setVisible(true);
             }
         });
-    }*/
+    }
 
 private javax.swing.JButton[] cour;   
 private HomeController controller;
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -288,6 +290,5 @@ private HomeController controller;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    // End of variables declaration                   
+    // End of variables declaration//GEN-END:variables
 }
-

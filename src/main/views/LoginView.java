@@ -81,13 +81,15 @@ public class LoginView extends JFrame {
                 CredentialsController check = new CredentialsController();
                 int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
                 User usuario = new User("Luis",username,password,cursos);
+                
+                // Agrega la impresión de consola antes de la creación de HomeController
+                System.out.println("Creando objeto HomeController");
                 HomeController homeController = new HomeController(usuario);
 
                 if (check.checkCredentials(username, password)) {
                 } else {
                     System.out.print("false");
                     JOptionPane.showMessageDialog(null, "Credenciales invalidas. Por favor, intentalo de nuevo.");
-                    
                 }
             }
         });
@@ -95,7 +97,6 @@ public class LoginView extends JFrame {
         buttonPanel.add(loginButton);
         formPanel.setBorder(BorderFactory.createEmptyBorder(100,30,0,30));
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(0, 30, 100, 30));
-
 
         panel.add(formPanel, BorderLayout.CENTER);
         panel.add(buttonPanel, BorderLayout.SOUTH);
