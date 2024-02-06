@@ -82,8 +82,6 @@ public class LoginView extends JFrame {
                 int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
                 User usuario = new User("Luis",username,password,cursos);
                 
-                // Agrega la impresión de consola antes de la creación de HomeController
-                System.out.println("Creando objeto HomeController");
                 HomeController homeController = new HomeController(usuario);
 
                 if (check.checkCredentials(username, password)) {
