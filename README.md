@@ -4,10 +4,7 @@ Repositorio de Proyecto. Grupo #4
 ## Integrantes:
 - Carlos Zavarce
 - Brhandon Palomo
-- Oscar Lugo
-- César Castro
 - Luis D'antuono
-- Josias González
 
 
 # MODELO DE DOMINIO -------------
@@ -48,6 +45,8 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 ![IniciarSesion](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIARSESION.png)
 
 ![Inicio](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIO.png)
+
+![InicioAdmin](docs\scenariosView\interfaces\INICIOADMIN.png)
 
 ![AdministrarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ADMINISTRAREXAMENES.png)
 
