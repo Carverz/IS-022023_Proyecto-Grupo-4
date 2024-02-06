@@ -122,3 +122,13 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 **Diagrama de Despliegue**
 
 ![DiagramaDespliegue](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/logicalView/designView/DiagramaDeDespligue/DiagramaDespliegue.png)
+
+# MODELO DE IMPLEMENTACIÓN -------------
+**Librerías**
+- java.io
+- javax.swing
+- java.awt
+- java.util
+
+**Instrucciones**
+En la carpeta src\main\views, Compilar y ejecutar LoginView.java
