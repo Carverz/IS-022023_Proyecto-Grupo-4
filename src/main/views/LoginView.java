@@ -82,14 +82,16 @@ public class LoginView extends JFrame {
                 int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
                 User usuario = new User("Luis",username,password,cursos);
                 
-                // Agrega la impresión de consola antes de la creación de HomeController
-                System.out.println("Creando objeto HomeController");
                 HomeController homeController = new HomeController(usuario);
 
                 if (check.checkCredentials(username, password)) {
+                    System.out.println("Inicio de sesión exitoso");
+                    HomeView homeView = new HomeView(homeController);
+                    homeView.setVisible(true);
+                    dispose(); // Cierra la ventana actual de inicio de sesión
                 } else {
-                    System.out.print("false");
-                    JOptionPane.showMessageDialog(null, "Credenciales invalidas. Por favor, intentalo de nuevo.");
+                    System.out.println("Credenciales inválidas. Por favor, inténtalo de nuevo.");
+                    JOptionPane.showMessageDialog(null, "Credenciales inválidas. Por favor, inténtalo de nuevo.");
                 }
             }
         });
