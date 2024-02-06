@@ -78,18 +78,12 @@ public class LoginView extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String username = usernameField.getText();
                 String password = new String(passwordField.getPassword());
-                credentialsController credenciales = new credentialsController();
-                int[] num ={0,1,2,-1,-1,-1,-1,-1,-1};
-                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ","EMAIL","ZARVACE",num);
-                HomeController homeController = new HomeController(usuar);
+                CredentialsController check = new CredentialsController();
+                int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
+                User usuario = new User("Luis",username,password,cursos);
+                HomeController homeController = new HomeController(usuario);
 
-                if (credenciales.checkCredentials(username, password)) {
-                    //System.out.print("true");
-                    JOptionPane.showMessageDialog(null, "Inicio de sesion exitoso");
-                    dispose();
-                    HomeView home = new HomeView(homeController);
-                    home.setVisible(true);
-                    // Agrega aqui la logica adicional que deseas realizar despues del inicio de sesion exitoso
+                if (check.checkCredentials(username, password)) {
                 } else {
                     System.out.print("false");
                     JOptionPane.showMessageDialog(null, "Credenciales invalidas. Por favor, intentalo de nuevo.");
