@@ -1,9 +1,9 @@
 package main.models;
 public class User{
-    private String name;
+    public String name;
     private String mail;
     private String password;
-    private int[] courseId;
+    public int[] courseId;
 
     public User(){};
 

@@ -138,7 +138,7 @@ public class ProfileView extends JFrame {
             }
         });
 
-        ImageIcon icon = new ImageIcon("C:\\Users\\cezav\\OneDrive\\Escritorio\\IS-022023_Proyecto-Grupo-4\\src\\JavaTech_logo.jpg");
+        ImageIcon icon = new ImageIcon("/main/image/javatech.png");
         Image iconImage = icon.getImage();
         setIconImage(iconImage);
 

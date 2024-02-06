@@ -4,18 +4,18 @@ package main.views;
 
 //import javax.swing.*;
 import java.awt.Color;
-import main.controllers.RequestCertificateController;
+import main.controllers.CertificateController;
 //import models.User;
 //import models.Course;
 
 
-public class RequestCertificateView extends javax.swing.JFrame {
+public class CertificateView extends javax.swing.JFrame {
 
-    private void setController(RequestCertificateController controller){
+    private void setController(CertificateController controller){
         this.controller = controller ;
     }
     
-    public RequestCertificateView(RequestCertificateController controller) {
+    public CertificateView(CertificateController controller) {
         initComponents();
         setController(controller);
         showCertificate();
@@ -293,7 +293,7 @@ public class RequestCertificateView extends javax.swing.JFrame {
     }
     */
      
-    private RequestCertificateController controller; 
+    private CertificateController controller; 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
