@@ -10,7 +10,7 @@ import java.io.IOException;
 // import main.models.User;
 // import main.controllers.HomeController;
 
-public class credentialsController{
+public class CredentialsController{
     
     // private HomeController controller;
 

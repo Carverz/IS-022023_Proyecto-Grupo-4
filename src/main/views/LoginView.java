@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 import main.controllers.HomeController;
-import main.controllers.credentialsController;
+import main.controllers.CredentialsController;
 import main.models.User;
 
 public class LoginView extends JFrame {
