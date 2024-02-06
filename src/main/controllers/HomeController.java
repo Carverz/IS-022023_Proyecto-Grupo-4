@@ -4,7 +4,7 @@ import main.models.Course;
 import main.models.User;
 
 public class HomeController {
-    private User usuario;
+    public User usuario;
     private Course[] curso;
     
     public HomeController(User usuario){

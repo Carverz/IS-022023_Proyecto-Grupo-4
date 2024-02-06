@@ -2,6 +2,7 @@ package main.views;
 
 import javax.swing.*;
 import main.controllers.HomeController;
+import main.controllers.ProfileController;
 import main.models.Course;
 import main.models.User;
 import java.awt.*;
@@ -27,15 +28,12 @@ public class HomeView extends javax.swing.JFrame {
         for (int i = 0; controller.getName(i) != null; i++) {
             this.cour[i].setEnabled(true);
             this.cour[i].setText("<html>" + controller.getName(i) + "<html>");
-
         }
-
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -155,8 +153,18 @@ public class HomeView extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton10.setText("Inicio");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("Ayuda!!!");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("Perfil");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -226,12 +234,29 @@ public class HomeView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        LoginView logInView = new LoginView();
+        logInView.setVisible(true);
+        this.dispose(); // Cierra la ventana actual (HomeView)
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        HelpView helpView = new HelpView(controller);
+        helpView.setVisible(true);
+        this.dispose(); // Cierra la ventana actual (HomeView)
+    }//GEN-LAST:event_jButton11ActionPerformed
+
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
+        ProfileController profileController = new ProfileController(controller.usuario);
+        ProfileView profileView = new ProfileView(profileController);
+        profileView.setVisible(true);
+        this.dispose(); // Cierra la ventana actual (HomeView)
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+        LogOutView logoutView = new LogOutView(HomeView.this);
+        logoutView.setVisible(true);
+        this.dispose(); // Cierra la ventana actual (HomeView)
     }//GEN-LAST:event_jButton13ActionPerformed
 
     /**

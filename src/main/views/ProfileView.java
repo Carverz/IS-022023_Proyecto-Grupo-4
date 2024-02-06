@@ -1,17 +1,17 @@
 package main.views;
-//package main.Views;
 
 import javax.swing.*;
 
+import main.controllers.HomeController;
+import main.controllers.ProfileController;
 //import main.views.LogOut;
-import main.models.User;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class UserView extends JFrame {
+public class ProfileView extends JFrame {
 
     private JLabel usernameLabel;
     private JLabel emailLabel;
@@ -19,7 +19,7 @@ public class UserView extends JFrame {
     private JTextField emailField;
     private JLabel userImageLabel;
 
-    public UserView(User user) {
+    public ProfileView(ProfileController controller) {
 
         setTitle("Perfil");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -102,8 +102,8 @@ public class UserView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                UserView userView = new UserView(user);
-                userView.setVisible(true);
+                ProfileView profileView = new ProfileView(controller);
+                profileView.setVisible(true);
                 dispose(); 
             }
         });
@@ -112,18 +112,18 @@ public class UserView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //LogOut logOut = new LogOut();
-                //logOut.setVisible(true);
+                LogOutView logOut = new LogOutView(ProfileView.this);
+                logOut.setVisible(true);
                 dispose(); 
             }
         });
-/* 
+
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              
-                HomeView homeView = new HomeView();
-                HomeViewomeView.setVisible(true);
+                HomeController homeController = new HomeController(controller.usuario);
+                HomeView homeView = new HomeView(homeController);
+                homeView.setVisible(true);
                 dispose(); 
             }
         });
@@ -131,20 +131,20 @@ public class UserView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                HelpView helpView = new HelpView(user);
+                HomeController homeController = new HomeController(controller.usuario);
+                HelpView helpView = new HelpView(homeController);
                 helpView.setVisible(true);
                 dispose(); 
             }
-        });*/
+        });
 
         ImageIcon icon = new ImageIcon("C:\\Users\\cezav\\OneDrive\\Escritorio\\IS-022023_Proyecto-Grupo-4\\src\\JavaTech_logo.jpg");
         Image iconImage = icon.getImage();
         setIconImage(iconImage);
 
  
-        setUsername(user.getName());
-        setEmail(user.getMail());
+        setUsername(controller.getUserName());
+        setEmail(controller.getUserMail());
     }
 
 

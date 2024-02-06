@@ -1,18 +1,21 @@
 package main.views;
-/* 
-package main;
+
 
 import javax.swing.*;
+
+import main.controllers.HomeController;
+import main.controllers.ProfileController;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class HelpView extends JFrame {
 
-    public HelpView(User user) {
+    public HelpView(HomeController controller) {
 
 
-        setTitle("Perfil");
+        setTitle("Ayuda!!!");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700, 450);
         setLocationRelativeTo(null);
@@ -29,8 +32,9 @@ public class HelpView extends JFrame {
         profileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UserView userView = new UserView(user);
-                userView.setVisible(true);
+                ProfileController profileController = new ProfileController(controller.usuario);
+                ProfileView profileView = new ProfileView(profileController);
+                profileView.setVisible(true);
                 dispose(); 
             }
         });
@@ -38,7 +42,7 @@ public class HelpView extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                LogOut LogOut = new LogOut();
+                LogOutView LogOut = new LogOutView(HelpView.this);
                 LogOut.setVisible(true);
                 dispose(); 
             }
@@ -47,7 +51,7 @@ public class HelpView extends JFrame {
         homeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HomeView homeView = new HomeView();
+                HomeView homeView = new HomeView(controller);
                 homeView.setVisible(true);
                 dispose(); 
             }
@@ -56,7 +60,7 @@ public class HelpView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HelpView helpView = new HelpView(user);
+                HelpView helpView = new HelpView(controller);
                 helpView.setVisible(true);
                 dispose(); 
             }
@@ -65,4 +69,3 @@ public class HelpView extends JFrame {
         
     }
 }
-*/
