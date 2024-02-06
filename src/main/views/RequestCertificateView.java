@@ -1,10 +1,10 @@
 
  
-package views;
+package main.views;
 
 //import javax.swing.*;
 import java.awt.Color;
-import controllers.RequestCertificateController;
+import main.controllers.RequestCertificateController;
 //import models.User;
 //import models.Course;
 
