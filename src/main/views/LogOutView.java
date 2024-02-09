@@ -11,8 +11,6 @@ public class LogOutView extends JFrame {
     public LogOutView(JFrame _previousScreen) {
         previousScreen = _previousScreen;
 
-        //public LogOutView() {
-
         setTitle("Cerrar Sesión");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
