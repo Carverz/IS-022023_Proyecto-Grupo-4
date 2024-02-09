@@ -9,7 +9,7 @@ import main.controllers.CredentialsController;
 import main.models.User;
 
 public class LoginView extends JFrame {
-    private JTextField usernameField;
+    private JTextField mailField;
     private JPasswordField passwordField;
     private JButton loginButton;
 
@@ -36,17 +36,17 @@ public class LoginView extends JFrame {
         gbc.gridy = 0;
         gbc.insets = new Insets(0, 0, 10, 10);
 
-        JLabel usernameLabel = new JLabel("Correo:");
-        usernameLabel.setFont(new Font("Bebas Neue", Font.PLAIN, 20));
-        formPanel.add(usernameLabel, gbc);
+        JLabel mailLabel = new JLabel("Correo:");
+        mailLabel.setFont(new Font("Bebas Neue", Font.PLAIN, 20));
+        formPanel.add(mailLabel, gbc);
 
         gbc.gridx = 1;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        usernameField = new JTextField();
-        usernameField.setFont(new Font("Arial", Font.PLAIN, 14));
-        formPanel.add(usernameField, gbc);
+        mailField = new JTextField();
+        mailField.setFont(new Font("Arial", Font.PLAIN, 14));
+        formPanel.add(mailField, gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -76,21 +76,23 @@ public class LoginView extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String username = usernameField.getText();
+                String mail = mailField.getText();
                 String password = new String(passwordField.getPassword());
+                String name = "";
                 CredentialsController check = new CredentialsController();
                 int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
-                User usuario = new User("Luis",username,password,cursos);
+                User usuario = new User("Luis",mail,password,cursos);
                 
                 HomeController homeController = new HomeController(usuario);
 
-                if (check.checkCredentials(username, password)) {
-                    System.out.println("Inicio de sesión exitoso");
+                if (check.checkCredentials(mail, password, name)) {
+                    //System.out.println("Inicio de sesión exitoso");
+                    System.out.println("Nombre: " + name);
                     HomeView homeView = new HomeView(homeController);
                     homeView.setVisible(true);
                     dispose(); // Cierra la ventana actual de inicio de sesión
                 } else {
-                    System.out.println("Credenciales inválidas. Por favor, inténtalo de nuevo.");
+                    //System.out.println("Credenciales inválidas. Por favor, inténtalo de nuevo.");
                     JOptionPane.showMessageDialog(null, "Credenciales inválidas. Por favor, inténtalo de nuevo.");
                 }
             }

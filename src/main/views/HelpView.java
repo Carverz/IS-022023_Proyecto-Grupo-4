@@ -1,11 +1,8 @@
 package main.views;
 
-
 import javax.swing.*;
-
 import main.controllers.HomeController;
 import main.controllers.ProfileController;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -44,7 +41,7 @@ public class HelpView extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 LogOutView LogOut = new LogOutView(HelpView.this);
                 LogOut.setVisible(true);
-                dispose(); 
+                dispose();
             }
         });
 
@@ -65,7 +62,5 @@ public class HelpView extends JFrame {
                 dispose(); 
             }
         });
-
-        
     }
 }
