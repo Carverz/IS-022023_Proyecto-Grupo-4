@@ -1,0 +1,81 @@
+package main.test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import main.models.Exam;
+import main.models.Question;
+
+public class ExamTest {
+    
+    private Exam exam;
+    private ArrayList<Question> questions;
+
+    @Before
+    public void setUp() {
+        // Crear algunas preguntas para el examen de prueba
+        questions = new ArrayList<>();
+        questions.add(new Question("Pregunta 1", Arrays.asList(new Answer("Respuesta 1", true))));
+        questions.add(new Question("Pregunta 2", Arrays.asList(new Answer("Respuesta 1", true), new Answer("Respuesta 2", false))));
+        questions.add(new Question("Pregunta 3", Arrays.asList(new Answer("Respuesta 1", false), new Answer("Respuesta 2", true))));
+
+        // Crear un examen con las preguntas y 30 minutos de tiempo
+        exam = new Exam(questions, 30);
+    }
+
+    @Test
+    public void testExamCreation() {
+        assertNotNull(exam);
+    }
+
+    @Test
+    public void testGetPreguntas() {
+        for (int i = 0; i < questions.size(); i++) {
+            assertEquals(questions.get(i), exam.getPreguntas(i));
+        }
+    }
+
+    @Test
+    public void testIncreaseResult() {
+        // Comprobar que el resultado aumenta después de llamar a increaseResult
+        int initialResult = exam.getResult();
+        exam.increaseResult();
+        assertEquals(initialResult + 1, exam.getResult());
+    }
+
+    @Test
+    public void testGetResult() {
+        // Comprobar que el resultado inicial es 0
+        assertEquals(0, exam.getResult());
+    }
+
+    @Test
+    public void testGetQuestionNumber() {
+        // Comprobar que el número de preguntas coincide con el tamaño de la lista de preguntas
+        assertEquals(questions.size(), exam.getQuestionNumber());
+    }
+
+    @Test
+    public void testGetAnswerNumber() {
+        // Comprobar que el número de respuestas de la primera pregunta es 1
+        assertEquals(1, exam.getAnswerNumber(0));
+        
+        // Comprobar que el número de respuestas de la segunda pregunta es 2
+        assertEquals(2, exam.getAnswerNumber(1));
+        
+        // Comprobar que el número de respuestas de la tercera pregunta es 2
+        assertEquals(2, exam.getAnswerNumber(2));
+    }
+
+    @Test
+    public void testGetMinuteTime() {
+        // Comprobar que el tiempo del examen es 30 minutos
+        assertEquals(30, exam.getMinuteTime());
+    }
+}

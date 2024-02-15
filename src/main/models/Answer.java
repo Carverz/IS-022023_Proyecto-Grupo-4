@@ -1,5 +1,5 @@
 
-package models;
+package main.models;
 
 
 public class Answer {

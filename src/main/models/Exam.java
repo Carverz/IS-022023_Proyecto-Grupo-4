@@ -1,8 +1,8 @@
 
-package models;
+package main.models;
 import java.util.ArrayList;
-import models.Question;
-import models.Answer;
+import main.models.Question;
+import main.models.Answer;
 
 public class Exam {
     private ArrayList<Question> preguntas;
