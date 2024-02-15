@@ -1,9 +1,7 @@
 package main.views;
 
 import javax.swing.*;
-
 import main.controllers.HomeController;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,8 +37,9 @@ public class HelpView extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes manejar la acción del botón Cerrar Sesión
-                System.out.println("Botón Cerrar Sesión presionado");
+                LogOutView LogOut = new LogOutView(HelpView.this);
+                LogOut.setVisible(true);
+                dispose(); 
             }
         });
 
@@ -55,22 +54,12 @@ public class HelpView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes manejar la acción del botón Ayuda
-                System.out.println("Botón Ayuda presionado");
+                HelpView helpView = new HelpView(controller);
+                helpView.setVisible(true);
+                dispose(); 
             }
         });
 
-        // Agregar los botones al panel superior (topPanel)
-        topPanel.add(profileButton, BorderLayout.WEST);
-        topPanel.add(logoutButton, BorderLayout.EAST);
-        topPanel.add(homeButton, BorderLayout.CENTER);
-        topPanel.add(helpButton, BorderLayout.SOUTH);
-
-        // Agregar el panel superior al marco principal (this)
-        add(topPanel, BorderLayout.NORTH);
-
-        // Resto de tu código...
+        
     }
-
-    // Otros métodos y miembros de la clase aquí...
 }

@@ -1,46 +1,37 @@
 package main.controllers;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.BufferedReader;
-// import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-// import main.models.Course;
-// import main.models.User;
-// import main.controllers.HomeController;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class CredentialsController{
     
-    // private HomeController controller;
+    public boolean checkCredentials(String mail, String password, String name) {
 
-    public boolean checkCredentials(String username, String password) {
-        try {
-            InputStream in =this.getClass().getResourceAsStream("Credenciales.txt");
-            Reader re = new InputStreamReader(in,"utf-8");
-            BufferedReader reader = new BufferedReader(re);
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] credentials = line.split("/");
-                if (credentials.length == 2 && credentials[0].equals(username) && credentials[1].equals(password)) {
-                    reader.close();
-                    // int[] num ={0,1,2,-1,-1,-1,-1,-1,-1};
-                    // User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ","EMAIL","ZARVACE",num);
-                    // this.controller =new HomeController(usuar);
+        JSONParser parser = new JSONParser();
+
+        try{
+            Object obj = parser.parse(new FileReader("src\\main\\data\\Datos.json"));
+            JSONObject jsonObject = (JSONObject) obj;
+
+            JSONArray array = (JSONArray) jsonObject.get("Datos");
+
+            for(int i = 0; i < array.size();i++){
+                JSONObject jsonObject2 = (JSONObject) array.get(i);
+                if (jsonObject2.get("mail").equals(mail) && jsonObject2.get("password").equals(password)) {
+                    name = (String) jsonObject2.get("name");
                     return true;
-                    
                 }
             }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.print("false");
+
+        }catch(FileNotFoundException e){ }
+        catch(IOException e){}
+        catch(ParseException e){}
         return false;
-    }
-    
-    // public HomeController getHomeController(){
-    //     return this.controller;
-    // }
-    
+    }    
 }

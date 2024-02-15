@@ -1,0 +1,7 @@
+{
+    "Datos":[
+        {"mail": "Brhandon","password":"Palomo", "name": "Brhandon Palomo"  ,"admin": 0},
+        {"mail": "Luis","password":"Dantuono", "name": "Luis DAntuano" ,"admin": 1},
+        {"mail": "Carlos","password":"Zavarce", "name": "Carlos Zavarce" ,"admin": 0}
+    ]
+}
