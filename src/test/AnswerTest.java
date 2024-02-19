@@ -10,10 +10,9 @@ public class AnswerTest {
         // Arrange
         String text = "Paris";
         boolean right = true;
-        String domain = "geography";
 
         // Act
-        Answer answer = new Answer(text, right, domain);
+        Answer answer = new Answer(text, right);
 
         // Assert
         assertEquals(text, answer.getText());
