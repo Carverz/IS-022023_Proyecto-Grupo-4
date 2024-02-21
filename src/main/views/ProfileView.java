@@ -140,7 +140,7 @@ public class ProfileView extends JFrame {
             }
         });
 
-        ImageIcon icon = new ImageIcon("/main/image/javatech.png");
+        ImageIcon icon = new ImageIcon("/data/image/javatech.png");
         Image iconImage = icon.getImage();
         setIconImage(iconImage);
 

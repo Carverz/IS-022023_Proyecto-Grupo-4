@@ -57,7 +57,7 @@ public class HomeView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        ImageIcon icon = new ImageIcon(getClass().getResource("/main/image/javatech.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/data/image/javatech.png"));
         Image image = icon.getImage().getScaledInstance(190, -1, Image.SCALE_SMOOTH);
         jLabel1.setIcon(new ImageIcon(image));
         jLabel1.setText("jLabel1");
