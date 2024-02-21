@@ -1,11 +1,11 @@
 
-package controllers;
+package main.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
-import models.Exam;
-import models.Question;
-import models.Answer;
+import main.models.Exam;
+import main.models.Question;
+import main.models.Answer;
 
 public class TakeExamController {
     private Exam examen;

@@ -1,5 +1,5 @@
 
-package views;
+package main.views;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -11,11 +11,11 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.Timer;
-import controllers.TakeExamController;
+import main.controllers.TakeExamController;
 import javax.swing.JOptionPane;
-import models.Answer;
-import models.Question;
-import models.Exam;
+import main.models.Answer;
+import main.models.Question;
+import main.models.Exam;
 
 
 public class ExamView extends javax.swing.JFrame implements ActionListener {
@@ -472,31 +472,31 @@ public class ExamView extends javax.swing.JFrame implements ActionListener {
             public void run() {
                 ArrayList<Answer> a = new ArrayList<>();
                 
-                a.add(new Answer("respuesta 1",false,""));
-                a.add(new Answer("respuesta 2",true,""));
-                a.add(new Answer("respuesta 3",false,""));
-                a.add(new Answer("respuesta 4",true,""));
+                a.add(new Answer("respuesta 1",false));
+                a.add(new Answer("respuesta 2",true));
+                a.add(new Answer("respuesta 3",false));
+                a.add(new Answer("respuesta 4",true));
                 
                 ArrayList<Answer> a2 = new ArrayList<>();
                 
-                a2.add(new Answer("respuesta 5",false,""));
-                a2.add(new Answer("respuesta 6",true,""));
-                a2.add(new Answer("respuesta 7",false,""));
-                a2.add(new Answer("respuesta 8",false,""));
-                a2.add(new Answer("respuesta 9",false,""));
+                a2.add(new Answer("respuesta 5",false));
+                a2.add(new Answer("respuesta 6",true));
+                a2.add(new Answer("respuesta 7",false));
+                a2.add(new Answer("respuesta 8",false));
+                a2.add(new Answer("respuesta 9",false));
                 
                 ArrayList<Answer> a3 = new ArrayList<>();
                 
-                a3.add(new Answer("respuesta 10",false,""));
-                a3.add(new Answer("respuesta 11",true,""));
-                a3.add(new Answer("respuesta 12",true,""));
-                a3.add(new Answer("respuesta 13",true,""));
-                a3.add(new Answer("respuesta 14",false,""));
+                a3.add(new Answer("respuesta 10",false));
+                a3.add(new Answer("respuesta 11",true));
+                a3.add(new Answer("respuesta 12",true));
+                a3.add(new Answer("respuesta 13",true));
+                a3.add(new Answer("respuesta 14",false));
                 
                 ArrayList<Question> b = new ArrayList<>();
-                b.add(new Question("¿Cual es la pregunta 1?",a," "));
-                b.add(new Question("¿Cual es la pregunta 2?",a2," "));
-                b.add(new Question("¿Cual es la pregunta 3?",a3," "));
+                b.add(new Question("¿Cual es la pregunta 1?",a));
+                b.add(new Question("¿Cual es la pregunta 2?",a2));
+                b.add(new Question("¿Cual es la pregunta 3?",a3));
                 
                 
                 
