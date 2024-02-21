@@ -12,10 +12,6 @@ public class Answer {
         this.right = right;
     }
 
-    public Answer(String text) {
-        this.text = text;
-    }
-
     public boolean isRight() {
         return this.right;
     }

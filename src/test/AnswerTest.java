@@ -23,7 +23,8 @@ public class AnswerTest {
     public void testIsRight() {
         // Arrange
         String text = "True";
-        Answer answer = new Answer(text);
+        boolean right = false;
+        Answer answer = new Answer(text, right);
 
         // Act & Assert
         assertEquals(false, answer.isRight());

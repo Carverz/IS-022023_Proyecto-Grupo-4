@@ -12,12 +12,13 @@ public class ExamTest {
     public void testConstructor() {
         // Arrange
         ArrayList<Question> preguntas = new ArrayList<>();
-        preguntas.add(new Question("Pregunta 1", new ArrayList<>(), "Justificación 1"));
-        preguntas.add(new Question("Pregunta 2", new ArrayList<>(), "Justificación 2"));
+        preguntas.add(new Question("Pregunta 1", new ArrayList<>(), "Justificación 1", "Dominio 1"));
+        preguntas.add(new Question("Pregunta 2", new ArrayList<>(), "Justificación 2", "Dominio 2"));
         int minuteTime = 60;
+        String name = "";
 
         // Act
-        Exam exam = new Exam(preguntas, minuteTime);
+        Exam exam = new Exam(preguntas, minuteTime, name);
 
         // Assert
        
@@ -34,10 +35,11 @@ public class ExamTest {
     public void testIncreaseResult() {
         // Arrange
         ArrayList<Question> preguntas = new ArrayList<>();
-        preguntas.add(new Question("Pregunta 1", new ArrayList<>(), "Justificación 1"));
-        preguntas.add(new Question("Pregunta 2", new ArrayList<>(), "Justificación 2"));
+        preguntas.add(new Question("Pregunta 1", new ArrayList<>(), "Justificación 1", "Dominio 1"));
+        preguntas.add(new Question("Pregunta 2", new ArrayList<>(), "Justificación 2", "Dominio 2"));
         int minuteTime = 60;
-        Exam exam = new Exam(preguntas, minuteTime);
+        String name = "";
+        Exam exam = new Exam(preguntas, minuteTime, name);
 
         // Act
         exam.increaseResult();
