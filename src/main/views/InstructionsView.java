@@ -6,13 +6,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HelpView extends JFrame {
+public class InstructionsView extends JFrame {
 
     private ProfileController Controller;
 
-    public HelpView(HomeController controller) {
+    public InstructionsView(HomeController controller) {
         this.Controller = new ProfileController(controller.usuario);
-        setTitle("Ayuda!!!");
+        setTitle("Instrucciones");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700, 600);
         setLocationRelativeTo(null);
@@ -55,7 +55,7 @@ public class HelpView extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                LogOutView logOut = new LogOutView(HelpView.this);
+                LogOutView logOut = new LogOutView(InstructionsView.this);
                 logOut.setVisible(true);
                 dispose();
             }
@@ -86,20 +86,19 @@ public class HelpView extends JFrame {
 
         Font questionFont = new Font("Arial", Font.BOLD, 20); // Fuente y tamaño del texto para las preguntas
 
-        JLabel option1Label = new JLabel("<html><span style='font-size:20px; color:blue;'>¿Cómo puedo ver mi perfil?</span><br/><span style='font-size:16px;'>Haz clic en el botón de la parte superior (Perfil)</span></html>");
+
+        JLabel option1Label = new JLabel("<html><span style='font-size:20px; color:black;'>1- El examen tendrá una duración de 1 hora, si se termina el tiempo, el examen finalizará con las preguntas respondidas hasta ese momento.\n </span></html>");
         option1Label.setFont(questionFont);
 
-        JLabel option2Label = new JLabel("<html><span style='font-size:20px; color:blue;'>¿Cómo puedo ver mis certificados obtenidos?</span><br/><span style='font-size:16px;'>Puedes ver tus certificados obtenidos en la pantalla de Perfil</span></html>");
+        JLabel option2Label = new JLabel("<html><span style='font-size:20px; color:black;'>2- Lea las preguntas detenidamente para poder comprender lo solicitado en el enunciado.\n </span></html>");
         option2Label.setFont(questionFont);
 
-        JLabel option3Label = new JLabel("<html><span style='font-size:20px; color:blue;'>¿Cuánto dura cada examen?</span><br/><span style='font-size:16px;'>Normalmente la duración de los exámenes es de 1 hora, sin embargo esto puede variar, por lo cual debes estar atento a las instrucciones del docente</span></html>");
+
+        JLabel option3Label = new JLabel("<html><span style='font-size:20px; color:black;'>3- El objetivo de este examen es medir los conocimientos y habilidades adquiridas por usted durante la realización de este curso.\n </span></html>");
         option3Label.setFont(questionFont);
 
-        JLabel option4Label = new JLabel("<html><span style='font-size:20px; color:blue;'>¿Puedo regresar a preguntas anteriores durante un examen?</span><br/><span style='font-size:16px;'>Sí, puedes regresar a preguntas anteriores durante un examen ya que el movimiento entre preguntas es libre</span></html>");
+        JLabel option4Label = new JLabel("<html><span style='font-size:20px; color:black;'>4- El examen es totalmente individual, cualquier intento de copia o plagio será penalizado con la nota mínima (01).</span></html>");
         option4Label.setFont(questionFont);
-
-        JLabel option5Label = new JLabel("<html><span style='font-size:20px; color:blue;'>¿Cuál es la nota mínima aprobatoria para un examen?</span><br/><span style='font-size:16px;'>La nota mínima aprobatoria es de 10 puntos, siendo 20 puntos la nota máxima posible</span></html>");
-        option5Label.setFont(questionFont);
 
         optionsPanel.add(option1Label);
         optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
@@ -109,7 +108,6 @@ public class HelpView extends JFrame {
         optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
         optionsPanel.add(option4Label);
         optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
-        optionsPanel.add(option5Label);
 
         add(optionsPanel, BorderLayout.CENTER); // Agrega optionsPanel al centro del contenedor principal
     }
