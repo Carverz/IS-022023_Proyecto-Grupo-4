@@ -27,6 +27,8 @@ public class ProfileView extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
+        
+
         JPanel topPanel = new JPanel(new BorderLayout());
         JButton profileButton = new JButton("Perfil");
         JButton logoutButton = new JButton("Cerrar Sesion");
