@@ -500,7 +500,7 @@ public class ExamView extends javax.swing.JFrame implements ActionListener {
                 
                 
                 
-                Exam c = new Exam(b,1);
+                Exam c = new Exam(b,1,"");
                 
                 TakeExamController controller = new TakeExamController(c);
                 
