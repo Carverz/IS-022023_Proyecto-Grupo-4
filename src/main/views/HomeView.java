@@ -80,6 +80,12 @@ public class HomeView extends javax.swing.JFrame {
 
         jButton2.setEnabled(false);
 
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         jButton3.setEnabled(false);
 
         jButton4.setEnabled(false);
