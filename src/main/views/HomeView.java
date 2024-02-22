@@ -41,7 +41,7 @@ public class HomeView extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+    
     private void initComponents() {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -239,40 +239,40 @@ public class HomeView extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {
 
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
        InstructionsView view = new InstructionsView(controller);
         view.setVisible(true);
        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {
        
     }
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
         HelpView helpView = new HelpView(controller);
         helpView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton11ActionPerformed
+        this.dispose(); 
+    }
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {
         ProfileController profileController = new ProfileController(controller.usuario);
         ProfileView profileView = new ProfileView(profileController);
         profileView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton12ActionPerformed
+        this.dispose(); 
+    }
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {
         LogOutView logoutView = new LogOutView(HomeView.this);
         logoutView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton13ActionPerformed
+        this.dispose(); 
+    }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         InstructionsView view = new InstructionsView(controller);
@@ -280,9 +280,7 @@ public class HomeView extends javax.swing.JFrame {
        dispose();
     }     
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
 
         try {
