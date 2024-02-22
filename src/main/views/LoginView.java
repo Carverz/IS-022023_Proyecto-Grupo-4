@@ -79,7 +79,7 @@ public class LoginView extends JFrame {
                 String mail = mailField.getText();
                 String password = new String(passwordField.getPassword());
                 String name = "";
-                boolean trueOrFalse;
+                boolean trueOrFalse = false;
                 CredentialsController check = new CredentialsController();
 
                 if (check.checkCredentials(mail, password, name, trueOrFalse)) {

@@ -26,7 +26,6 @@ public class MakeExamView extends JFrame {
     private JButton generateExamButton;
     private String pathImg = "";
 
-
     public MakeExamView() {
         questions = new ArrayList<>();
 
@@ -149,7 +148,7 @@ public class MakeExamView extends JFrame {
                     }
 
                     String domainText = domainTextField.getText();
-                    Question question = new Question(questionText,answers,justificationText,domainText);
+                    Question question = new Question(questionText, answers, justificationText, domainText);
                     question.setImg(pathImg);
                     questions.add(question);
                     pathImg = "";
@@ -183,13 +182,7 @@ public class MakeExamView extends JFrame {
                 fileChooser.setFileFilter(filter);
                 int resp = fileChooser.showOpenDialog(null);
                 if (resp == JFileChooser.APPROVE_OPTION) {
-                    // if(questions.size() != 0){
-                        pathImg = fileChooser.getSelectedFile().getPath();
-                        // questions.get(questions.size()-1).setImg(pathImg);
-                    // }else{
-                    //     pathImg = fileChooser.getSelectedFile().getPath();
-                    // }
-                    //question.setImg(pathImg);
+                    pathImg = fileChooser.getSelectedFile().getPath();
                 }
             }
         });
