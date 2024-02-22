@@ -235,10 +235,8 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        LoginView logInView = new LoginView();
-        logInView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton10ActionPerformed
+       
+    }
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         HelpView helpView = new HelpView(controller);
