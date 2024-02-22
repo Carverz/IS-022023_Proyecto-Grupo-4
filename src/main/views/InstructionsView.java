@@ -131,7 +131,7 @@ public class InstructionsView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 examController = controller.getExamController(exam);
-                ExamView view = new ExamView(examController,0);
+                TakeExamView view = new TakeExamView(examController,0);
                 dispose();
                 // Lógica para manejar el clic en el botón "Aceptar"
             }

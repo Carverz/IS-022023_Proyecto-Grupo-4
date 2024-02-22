@@ -18,7 +18,7 @@ import main.models.Question;
 import main.models.Exam;
 
 
-public class ExamView extends javax.swing.JFrame implements ActionListener {
+public class TakeExamView extends javax.swing.JFrame implements ActionListener {
 
    private List<JRadioButton> buttons;
    //private ButtonGroup group;
@@ -28,13 +28,13 @@ public class ExamView extends javax.swing.JFrame implements ActionListener {
    public int second;
    private TakeExamController controller;
    private int index;
-   private ExamView prevView;
-   private ExamView nextView;
+   private TakeExamView prevView;
+   private TakeExamView nextView;
    private int seleccionMax;
    private int seleccion;
    private int seleccionPrev;
    
-    public ExamView(TakeExamController controller,int index) {
+    public TakeExamView(TakeExamController controller,int index) {
         hour = controller.gethour();
        minute = controller.getminute();
        second =controller.getsecond();
@@ -60,7 +60,7 @@ public class ExamView extends javax.swing.JFrame implements ActionListener {
        
     }
     
-    public ExamView(TakeExamController controller,int index,ExamView prevView,int seleccionPrev){
+    public TakeExamView(TakeExamController controller,int index,TakeExamView prevView,int seleccionPrev){
   
         this.prevView = prevView;
        this.controller = controller;
@@ -416,7 +416,7 @@ public class ExamView extends javax.swing.JFrame implements ActionListener {
       }
       
        if(this.nextView == null)
-          this.nextView = new ExamView(controller,index+1,this,k);
+          this.nextView = new TakeExamView(controller,index+1,this,k);
       
       this.nextView.setVisible(true);
       this.nextView.setTextTimer();
@@ -457,13 +457,13 @@ public class ExamView extends javax.swing.JFrame implements ActionListener {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TakeExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TakeExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TakeExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TakeExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
