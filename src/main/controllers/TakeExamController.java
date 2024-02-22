@@ -6,7 +6,7 @@ import java.util.List;
 import main.models.Exam;
 import main.models.Question;
 import main.models.Answer;
-import models.User;
+import main.models.User;
 
 public class TakeExamController {
     private Exam examen;
