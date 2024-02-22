@@ -1,4 +1,5 @@
 package main.views;
+
 import javax.swing.*;
 import main.controllers.HomeController;
 import main.controllers.ProfileController;
@@ -86,13 +87,11 @@ public class InstructionsView extends JFrame {
 
         Font questionFont = new Font("Arial", Font.BOLD, 20); // Fuente y tamaño del texto para las preguntas
 
-
         JLabel option1Label = new JLabel("<html><span style='font-size:20px; color:black;'>1- El examen tendrá una duración de 1 hora, si se termina el tiempo, el examen finalizará con las preguntas respondidas hasta ese momento.\n </span></html>");
         option1Label.setFont(questionFont);
 
         JLabel option2Label = new JLabel("<html><span style='font-size:20px; color:black;'>2- Lea las preguntas detenidamente para poder comprender lo solicitado en el enunciado.\n </span></html>");
         option2Label.setFont(questionFont);
-
 
         JLabel option3Label = new JLabel("<html><span style='font-size:20px; color:black;'>3- El objetivo de este examen es medir los conocimientos y habilidades adquiridas por usted durante la realización de este curso.\n </span></html>");
         option3Label.setFont(questionFont);
@@ -110,5 +109,24 @@ public class InstructionsView extends JFrame {
         optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
 
         add(optionsPanel, BorderLayout.CENTER); // Agrega optionsPanel al centro del contenedor principal
+
+        // Crea el botón "Aceptar"
+        JButton acceptButton = new JButton("Aceptar");
+        acceptButton.setFont(new Font("Arial", Font.BOLD, 24)); // Ajusta el tamaño de la fuente del botón
+
+        // Crea un panel para contener el botón "Aceptar"
+        JPanel acceptButtonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); // Utiliza FlowLayout para centrar el botón
+        acceptButtonPanel.setBackground(Color.white);
+        acceptButtonPanel.add(acceptButton);
+
+        // Agrega el panel del botón "Aceptar" al contenedor principal debajo del panel de opciones
+        add(acceptButtonPanel, BorderLayout.SOUTH);
+
+        acceptButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Lógica para manejar el clic en el botón "Aceptar"
+            }
+        });
     }
 }
