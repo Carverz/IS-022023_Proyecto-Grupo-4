@@ -4,7 +4,7 @@ skinparam Style strictuml
 
 [*] --> Sesion_iniciada: Iniciar sesion
 Sesion_iniciada --> Sesion_iniciada: Modificar informacion del perfil
-Sesion_iniciada --> Agregando_Usuarios: Agregar usuario
+Sesion_iniciada --> Agregando_Usuarios: Agregar usuarios
 Agregando_Usuarios --> Sesion_iniciada
 
 Sesion_iniciada --> Viendo_Examenes: Ver lista de examenes

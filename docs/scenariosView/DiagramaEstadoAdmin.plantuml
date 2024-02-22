@@ -1,7 +1,7 @@
 @startuml DiagramaEstadoAdmin
 
 [*] --> Credenciales_Validadas: Validacion de credenciales del adminstrador
-Credenciales_Validadas --> Agregando_Alumnos : Administrar alumnos
+Credenciales_Validadas --> Agregando_Alumnos : Agregar alumnos
 Agregando_Alumnos --> Credenciales_Validadas
 Credenciales_Validadas --> Viendo_Examenes : Ver lista de examenes
 Viendo_Examenes --> Viendo_Examenes: Agregar examen
