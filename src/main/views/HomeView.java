@@ -3,7 +3,6 @@ package main.views;
 import javax.swing.*;
 import main.controllers.HomeController;
 import main.controllers.ProfileController;
-import main.models.Course;
 import main.models.User;
 import java.awt.*;
 import org.json.simple.JSONArray;
@@ -307,10 +306,6 @@ public class HomeView extends javax.swing.JFrame {
                 
 
                 User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ", "EMAIL", "ZARVACE");
-                Course[] curso = new Course[3];
-                curso[0] = new Course("Lenguaje de Programación Java: Nivel Basico");
-                curso[1] = new Course("Lenguaje de Programación C++: Nivel Basico");
-                curso[2] = new Course("Lenguaje de Programación PHP: Nivel Basico");
                 HomeController controller;
                 controller = new HomeController(usuar);
                 HomeView home = new HomeView(controller);

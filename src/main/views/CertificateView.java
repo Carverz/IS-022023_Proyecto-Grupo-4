@@ -25,7 +25,7 @@ public class CertificateView extends javax.swing.JFrame {
     
     public void showCertificate(){
         this.jLabel4.setText(controller.getData().getName());
-        this.jLabel6.setText("certificación "+controller.getCourse()+ " el "+controller.getDate());
+        this.jLabel6.setText("certificación " + " el "+controller.getDate());
         
     }
 
