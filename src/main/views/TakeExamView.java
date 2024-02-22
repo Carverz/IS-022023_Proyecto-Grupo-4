@@ -501,7 +501,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
                 
                 TakeExamController controller = new TakeExamController(c);
                 
-                new ExamView(controller,0).setVisible(true);
+                new TakeExamView(controller,0).setVisible(true);
             }
         });
     }

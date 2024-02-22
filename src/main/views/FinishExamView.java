@@ -1,11 +1,11 @@
 
-package Views;
+package main.views;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
-import models.Question;
-import controllers.TakeExamController;
+import main.models.Question;
+import main.controllers.TakeExamController;
 
 
 public class FinishExamView extends javax.swing.JFrame {
