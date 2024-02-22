@@ -23,20 +23,21 @@ public class HomeView extends javax.swing.JFrame {
         JSONParser parse = new JSONParser();
         try{
             Object obj = parse.parse(new FileReader("src\\data\\exams\\Exam1.json"));
-            JSONObject jsonObject = (JSONObject) obj;
-            
+            JSONArray jsonArray = (JSONArray) obj;
+            JSONObject jsonObject = (JSONObject)jsonArray.get(0);
             
             jButton1.setText((String)jsonObject.get("name"));
             jButton1.setEnabled(true);
-            obj = parse.parse(new FileReader("src\\data\\exams\\Exam1.json"));
-            jsonObject = (JSONObject) obj;
+            obj = parse.parse(new FileReader("src\\data\\exams\\Exam2.json"));
+             jsonArray = (JSONArray) obj;
+             jsonObject = (JSONObject)jsonArray.get(0);
             jButton2.setText((String)jsonObject.get("name"));
             jButton2.setEnabled(true);
         }catch(FileNotFoundException e) { }
         catch(IOException e) { }
         catch(ParseException e) {System.out.print("no leido"); }
-
-        this.controller = controller; 
+        
+        this.controller = controller;
     }
 
     @SuppressWarnings("unchecked")
