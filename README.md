@@ -3,8 +3,8 @@ Repositorio de Proyecto. Grupo #4
 
 ## Integrantes:
 - Carlos Zavarce
-- Brhandon Palomo
 - Luis D'antuono
+- Brhandon Palomo
 
 
 # MODELO DE DOMINIO -------------
