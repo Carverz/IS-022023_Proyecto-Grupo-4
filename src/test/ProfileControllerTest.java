@@ -26,9 +26,9 @@ public class ProfileControllerTest {
         ProfileController controller = new ProfileController(user);
 
         // Act & Assert
-        assertNull(controller.getName(0));
-        assertNull(controller.getName(1));
-        assertNull(controller.getName(2));
+        assertNull(controller.getUserName());
+        assertNull(controller.getUserName());
+        assertNull(controller.getUserName());
     }
 
     @Test

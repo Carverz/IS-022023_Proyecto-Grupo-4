@@ -11,28 +11,18 @@ public class UserTest {
         String expectedName = "Carlos";
         String expectedMail = "cezavarcev16@gmail.com";
         String expectedPassword = "password";
-        int[] expectedCourseIds = {1, 2, 3};
 
-        User user = new User(expectedName, expectedMail, expectedPassword, expectedCourseIds);
+        User user = new User(expectedName, expectedMail, expectedPassword);
         
         assertEquals(expectedName, user.getName());
         assertEquals(expectedMail, user.getMail());
         assertEquals(expectedPassword, user.getPassword());
-        assertArrayEquals(expectedCourseIds, user.getCourseData());
-    }
-
-    @Test
-    public void testGetCourseData() {
-        int[] expectedCourseIds = {1, 2, 3};
-        User user = new User("Carlos", "cezavarcev16@gmail.com", "password", expectedCourseIds);
-        
-        assertArrayEquals(expectedCourseIds, user.getCourseData());
     }
 
     @Test
     public void testGetPassword() {
         String expectedPassword = "password";
-        User user = new User("Carlos", "cezavarcev16@gmail.com", expectedPassword, new int[]{});
+        User user = new User("Carlos", "cezavarcev16@gmail.com", expectedPassword);
         
         assertEquals(expectedPassword, user.getPassword());
     }
@@ -40,7 +30,7 @@ public class UserTest {
     @Test
     public void testGetMail() {
         String expectedMail = "cezavarcev16@gmail.com";
-        User user = new User("Carlos", expectedMail, "password", new int[]{});
+        User user = new User("Carlos", expectedMail, "password");
         
         assertEquals(expectedMail, user.getMail());
     }
@@ -48,7 +38,7 @@ public class UserTest {
     @Test
     public void testGetName() {
         String expectedName = "Carlos";
-        User user = new User(expectedName, "cezavarcev16@gmail.com", "password", new int[]{});
+        User user = new User(expectedName, "cezavarcev16@gmail.com", "password");
         
         assertEquals(expectedName, user.getName());
     }
