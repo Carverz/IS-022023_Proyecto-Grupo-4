@@ -11,7 +11,7 @@ import org.json.simple.parser.ParseException;
 
 public class CredentialsController{
     
-    public boolean checkCredentials(String mail, String password, String name, boolean t) {
+    public boolean checkCredentials(String mail, String password, String name) {
 
         JSONParser parser = new JSONParser();
 
@@ -25,7 +25,6 @@ public class CredentialsController{
                 JSONObject jsonObject2 = (JSONObject) array.get(i);
                 if (jsonObject2.get("mail").equals(mail) && jsonObject2.get("password").equals(password)) {
                     name = (String) jsonObject2.get("name");
-                    t = (boolean) jsonObject2.get("admin");
                     return true;
                 }
             }
