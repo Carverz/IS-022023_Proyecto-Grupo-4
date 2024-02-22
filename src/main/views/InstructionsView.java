@@ -3,6 +3,7 @@ package main.views;
 import javax.swing.*;
 import main.controllers.HomeController;
 import main.controllers.ProfileController;
+import main.controllers.TakeExamController;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 public class InstructionsView extends JFrame {
 
     private ProfileController Controller;
+    private TakeExamController examController;
 
     public InstructionsView(HomeController controller) {
         this.Controller = new ProfileController(controller.usuario);
