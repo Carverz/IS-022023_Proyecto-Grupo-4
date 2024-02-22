@@ -17,6 +17,7 @@ import java.io.IOException;
 public class HomeView extends javax.swing.JFrame {
     private javax.swing.JButton[] cour;
     private HomeController controller;
+    
 
     public HomeView(HomeController controller) {
         initComponents();
@@ -246,7 +247,7 @@ public class HomeView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-       InstructionsView view = new InstructionsView(controller);
+       InstructionsView view = new InstructionsView(controller,jButton1.getText());
         view.setVisible(true);
        dispose();
     }
