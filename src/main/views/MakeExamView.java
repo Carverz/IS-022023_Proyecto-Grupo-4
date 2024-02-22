@@ -156,6 +156,7 @@ public class MakeExamView extends JFrame {
                     Question question = new Question(questionText,answers,justificationText,domainText);
                     question.setImg(pathImg);
                     questions.add(question);
+                    pathImg = "";
 
                     // Mostrar las preguntas en el área de texto
                     questionsTextArea.append("Pregunta: " + questionText + "\n");
