@@ -6,6 +6,7 @@ import java.util.List;
 import main.models.Exam;
 import main.models.Question;
 import main.models.Answer;
+import models.User;
 
 public class TakeExamController {
     private Exam examen;
@@ -13,20 +14,25 @@ public class TakeExamController {
     private int hour;
     private int minute;
     private int second;
+    private float result;
+    private User usuario;
     
-    public TakeExamController(Exam examen){
+    public TakeExamController(Exam examen,User usuario){
         this.examen = examen;
         respuesta = new ArrayList<>();
         hour=0;
         second=0;
         minute=0;
+        result = 0;
+        for(int i=0;i<getQuestNumber();i++){
+            for(int j=0;j<getIterator(i);j++)
+                if(getRightAnswer(i,j)==true)
+                    result++;
+        }
         getTime();
         
         
-        //for(int i=0;i<getQuestNumber();i++)
-          //  respuesta.add(i,null);
         
-        //index = 0;
     }
     
     public int gethour(){
@@ -100,6 +106,16 @@ public class TakeExamController {
     
     public int getRespuestaSize(){
         return respuesta.size();
+    }
+     public String getJustiication(int index){
+        return examen.getPreguntas(index).getJustification();
+    }
+    public float getResult(){
+        return result;
+    }
+    
+    public User getUsuario(){
+        return this.usuario;
     }
 }
     
