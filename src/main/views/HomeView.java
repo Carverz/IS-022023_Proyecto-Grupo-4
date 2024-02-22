@@ -276,7 +276,7 @@ public class HomeView extends javax.swing.JFrame {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        InstructionsView view = new InstructionsView(controller);
+        InstructionsView view = new InstructionsView(controller,jButton2.getText());
         view.setVisible(true);
        dispose();
     }     
