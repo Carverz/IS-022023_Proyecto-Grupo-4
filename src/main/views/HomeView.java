@@ -240,7 +240,8 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new InstructionsView(controller);
+       InstructionsView view = new InstructionsView(controller);
+        view.setVisible(true);
        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -268,7 +269,8 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        new InstructionsView(controller);
+        InstructionsView view = new InstructionsView(controller);
+        view.setVisible(true);
        dispose();
     }     
 
