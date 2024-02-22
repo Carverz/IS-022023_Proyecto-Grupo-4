@@ -19,7 +19,7 @@ public class LoginView extends JFrame {
         setResizable(false);
         setSize(1280, 720);
         setLocationRelativeTo(null);
-        ImageIcon image = new ImageIcon("Logo.png");
+        ImageIcon image = new ImageIcon("src\\data\\image\\Logo.png");
         setIconImage(image.getImage());
 
         JPanel panel = new JPanel();

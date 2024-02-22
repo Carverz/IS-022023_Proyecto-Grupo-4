@@ -16,7 +16,6 @@ import java.io.IOException;
 
 public class MakeExamView extends JFrame {
     private ArrayList<Question> questions;
-    private Question question = new Question();
     private JTextField durationTextField;
     private JTextField domainTextField;
     private JTextArea questionTextArea;
@@ -25,6 +24,8 @@ public class MakeExamView extends JFrame {
     private JButton fileChooserButton;
     private JButton addQuestionButton;
     private JButton generateExamButton;
+    private String pathImg = "";
+
 
     public MakeExamView() {
         questions = new ArrayList<>();
@@ -148,10 +149,12 @@ public class MakeExamView extends JFrame {
                     }
 
                     String domainText = domainTextField.getText();
-                    question.setStatement(questionText);
-                    question.setAnswer(answers);
-                    question.setJust(justificationText);
-                    question.setDomain(domainText);
+                    // question.setStatement(questionText);
+                    // question.setAnswer(answers);
+                    // question.setJust(justificationText);
+                    // question.setDomain(domainText);
+                    Question question = new Question(questionText,answers,justificationText,domainText);
+                    question.setImg(pathImg);
                     questions.add(question);
 
                     // Mostrar las preguntas en el área de texto
@@ -178,14 +181,18 @@ public class MakeExamView extends JFrame {
         fileChooserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String pathImg;
                 JFileChooser fileChooser = new JFileChooser();
                 FileNameExtensionFilter filter = new FileNameExtensionFilter("jpg, jpeg & png", "jpg", "png", "jpeg");
                 fileChooser.setFileFilter(filter);
                 int resp = fileChooser.showOpenDialog(null);
                 if (resp == JFileChooser.APPROVE_OPTION) {
-                    pathImg = fileChooser.getSelectedFile().getPath();
-                    question.setImg(pathImg);
+                    // if(questions.size() != 0){
+                        pathImg = fileChooser.getSelectedFile().getPath();
+                        // questions.get(questions.size()-1).setImg(pathImg);
+                    // }else{
+                    //     pathImg = fileChooser.getSelectedFile().getPath();
+                    // }
+                    //question.setImg(pathImg);
                 }
             }
         });
