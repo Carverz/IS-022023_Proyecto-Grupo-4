@@ -43,6 +43,10 @@ public class Question {
         return img;
     }
 
+    public String getJustification(){
+        return justification;
+    }
+
     public void setImg(String i){
         img = i;
     }
