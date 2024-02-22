@@ -1,4 +1,4 @@
-@startuml
+@startuml DiagramaCasosDeUsos
 left to right direction
 
 actor Admin as A
@@ -10,24 +10,18 @@ rectangle "Sistema de Cursos y Certificados" {
   A --> (Cerrar Sesión)
   A --> (Administrar Usuarios)
   A --> (Agregar Usuario)
-  A --> (Eliminar Usuario)
   A --> (Ver Lista de Exámenes)
-  A --> (Modificar Examen)
-  A --> (Modificar informacion de perfil)
+  A --> (Agregar Examen)
+  A --> (Modificar informacion de perfil) 
   U1 --> (Iniciar Sesion)
   U1 --> (Cerrar Sesión)
   U1 --> (Ver Ayuda)
-  U1 --> (Ver Lista de Cursos)
   U1 --> (Ver Lista de Exámenes)
   U1 --> (Ver Certificado)
   U1 --> (Presentar Examen) 
   (Presentar Examen)  --> (Responder Preguntas): <<Include>>
   (Presentar Examen) --> (Ver Resultados): <<Include>>
   U1--> (Modificar informacion de perfil)
-
-
-  
-
 }
 
 @enduml

@@ -6,6 +6,13 @@ import main.controllers.ProfileController;
 import main.models.Course;
 import main.models.User;
 import java.awt.*;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class HomeView extends javax.swing.JFrame {
     private javax.swing.JButton[] cour;
@@ -13,22 +20,24 @@ public class HomeView extends javax.swing.JFrame {
 
     public HomeView(HomeController controller) {
         initComponents();
+        JSONParser parse = new JSONParser();
+        try{
+            Object obj = parse.parse(new FileReader("src\\data\\exams\\Exam1.json"));
+            JSONArray jsonArray = (JSONArray) obj;
+            JSONObject jsonObject = (JSONObject)jsonArray.get(0);
+            
+            jButton1.setText((String)jsonObject.get("name"));
+            jButton1.setEnabled(true);
+            obj = parse.parse(new FileReader("src\\data\\exams\\Exam2.json"));
+             jsonArray = (JSONArray) obj;
+             jsonObject = (JSONObject)jsonArray.get(0);
+            jButton2.setText((String)jsonObject.get("name"));
+            jButton2.setEnabled(true);
+        }catch(FileNotFoundException e) { }
+        catch(IOException e) { }
+        catch(ParseException e) {System.out.print("no leido"); }
+        
         this.controller = controller;
-        this.cour = new javax.swing.JButton[9];
-        this.cour[0] = this.jButton1;
-        this.cour[1] = this.jButton2;
-        this.cour[2] = this.jButton3;
-        this.cour[3] = this.jButton4;
-        this.cour[4] = this.jButton5;
-        this.cour[5] = this.jButton6;
-        this.cour[6] = this.jButton7;
-        this.cour[7] = this.jButton8;
-        this.cour[8] = this.jButton9;
-
-        for (int i = 0; controller.getName(i) != null; i++) {
-            this.cour[i].setEnabled(true);
-            this.cour[i].setText("<html>" + controller.getName(i) + "<html>");
-        }
     }
 
     @SuppressWarnings("unchecked")
@@ -231,7 +240,9 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       InstructionsView view = new InstructionsView(controller);
+        view.setVisible(true);
+       dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -256,6 +267,12 @@ public class HomeView extends javax.swing.JFrame {
         logoutView.setVisible(true);
         this.dispose(); // Cierra la ventana actual (HomeView)
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        InstructionsView view = new InstructionsView(controller);
+        view.setVisible(true);
+       dispose();
+    }     
 
     /**
      * @param args the command line arguments

@@ -1,14 +1,12 @@
-@startuml
+@startuml DiagramaDeEstadosDeUseCasesUsuario
 skinparam Style strictuml
 
 
 [*] --> Sesion_iniciada: Iniciar sesion
 Sesion_iniciada --> Sesion_iniciada: Modificar inofrmacion del perfil
-Sesion_iniciada --> Viendo_documentacion: Ver documentacion
-Viendo_documentacion --> Sesion_iniciada
 
-Sesion_iniciada --> Cursos_Vistos: Ver lista de cursos
-Cursos_Vistos --> Examenes_Vistos: Ver lista de examenes
+
+Sesion_iniciada -->  Examenes_Vistos: Ver lista de examenes
 Examenes_Vistos --> Resolviendo_Examen: Resolver examen
 Resolviendo_Examen --> Resolviendo_Examen: Responder preguntas 
 Resolviendo_Examen --> Examen_Finalizado: Finalizar examen

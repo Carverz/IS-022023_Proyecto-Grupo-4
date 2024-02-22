@@ -48,21 +48,11 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 
 ![InicioAdmin](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/INICIOADMIN.png)
 
-![AdministrarExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ADMINISTRAREXAMENES.png)
-
-![AdministrarUsuarios](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ADMINISTRARUSUARIOS.png)
-
 ![AnadirExamen](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ANADIREXAMEN.PNG)
 
 ![AnadirUsuario](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/ANADIRUSUARIO.PNG)
 
 ![VerAyuda](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VERAYUDA.PNG)
-
-![VerCurso](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VERCURSO.png)
-
-![VerCursoAdmin](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VERCURSOADMIN.png)
-
-![VerExamenes](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VEREXAMENES.png)
 
 ![VerInstrucciones](https://github.com/Carverz/IS-022023_Proyecto-Grupo-4/blob/main/docs/scenariosView/interfaces/VERINSTRUCCIONES.PNG)
 

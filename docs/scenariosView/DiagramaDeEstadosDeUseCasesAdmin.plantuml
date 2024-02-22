@@ -1,16 +1,14 @@
-@startuml
+@startuml DiagramaDeEstadosDeUseCasesAdmin
 skinparam Style strictuml
 
 
 [*] --> Sesion_iniciada: Iniciar sesion
 Sesion_iniciada --> Sesion_iniciada: Modificar informacion del perfil
-Sesion_iniciada --> Administrando_Usuarios: Administrar usuarios
-Administrando_Usuarios --> Administrando_Usuarios: Agregar usuario
-Administrando_Usuarios --> Administrando_Usuarios: Eliminar usuario
-Administrando_Usuarios --> Sesion_iniciada
+Sesion_iniciada --> Agregando_Usuarios: Agregar usuarios
+Agregando_Usuarios --> Sesion_iniciada
 
 Sesion_iniciada --> Viendo_Examenes: Ver lista de examenes
-Viendo_Examenes --> Viendo_Examenes: Modificar examen
+Viendo_Examenes --> Viendo_Examenes: Agregar examen
 Viendo_Examenes --> Sesion_iniciada
 Sesion_iniciada --> [*]: Cerrar sesion
 
