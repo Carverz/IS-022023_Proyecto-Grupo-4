@@ -7,33 +7,58 @@ import org.json.simple.JSONObject;
 
 public class Question {
     private String statement;
-    private ArrayList<Answer> respuesta;
+    private ArrayList<Answer> answer;
     private String justification;
     private String domain;
+    private String img;
     
-    public Question(String statement, ArrayList<Answer> respuesta, String justification, String domain){
+    public Question(String statement, ArrayList<Answer> answer, String justification, String domain){
         this.statement = statement;
-        this.respuesta = respuesta;
+        this.answer = answer;
         this.justification = justification;
         this.domain = domain;
+        this.img = "";
     }
     
-    public Question(String statement, ArrayList<Answer> respuesta){
+    public Question(String statement, ArrayList<Answer> answer){
         this.statement = statement;
-        this.respuesta = respuesta;
+        this.answer = answer;
     }
+
+    public Question(){}
     
     public String getStatement(){
         return statement;
     }
     
     public int getAnswerNumber(){
-        return this.respuesta.size();
+        return this.answer.size();
     }
     
     public Answer getAnswer(int i){
-        return this.respuesta.get(i);
+        return this.answer.get(i);
     }
+
+    public String getImg(){
+        return img;
+    }
+
+    public void setImg(String i){
+        img = i;
+    }
+    public void setDomain(String d){
+        domain = d;
+    }
+    public void setJust(String j){
+        justification = j;
+    }
+    public void setAnswer(ArrayList<Answer> a){
+        answer = a;
+    }
+    public void setStatement(String s){
+        statement = s;
+    }
+
 
     @SuppressWarnings("unchecked")
     public JSONObject toJSON()
@@ -41,7 +66,8 @@ public class Question {
         JSONObject questionJSON = new JSONObject();
         JSONArray answerArray = new JSONArray();
         questionJSON.put("domain", this.domain);
-        answerArray.addAll(this.respuesta.stream().map(Answer::toJSON).collect(Collectors.toList()));
+        questionJSON.put("imgPath", this.img);
+        answerArray.addAll(this.answer.stream().map(Answer::toJSON).collect(Collectors.toList()));
         questionJSON.put("text", this.statement);
         questionJSON.put("answers", answerArray);
         questionJSON.put("justification", this.justification);
