@@ -149,10 +149,6 @@ public class MakeExamView extends JFrame {
                     }
 
                     String domainText = domainTextField.getText();
-                    // question.setStatement(questionText);
-                    // question.setAnswer(answers);
-                    // question.setJust(justificationText);
-                    // question.setDomain(domainText);
                     Question question = new Question(questionText,answers,justificationText,domainText);
                     question.setImg(pathImg);
                     questions.add(question);

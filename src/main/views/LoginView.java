@@ -79,27 +79,28 @@ public class LoginView extends JFrame {
                 String mail = mailField.getText();
                 String password = new String(passwordField.getPassword());
                 String name = "";
+                boolean trueOrFalse;
                 CredentialsController check = new CredentialsController();
-                int[] cursos = {0,1,2,-1,-1,-1,-1,-1,-1};
-                User usuario = new User("Luis",mail,password,cursos);
-                
-                HomeController homeController = new HomeController(usuario);
 
-                if (check.checkCredentials(mail, password, name)) {
-                    //System.out.println("Inicio de sesión exitoso");
-                    System.out.println("Nombre: " + name);
-                    HomeView homeView = new HomeView(homeController);
-                    homeView.setVisible(true);
+                if (check.checkCredentials(mail, password, name, trueOrFalse)) {
+                    User usuario = new User(name, mail, password);
+                    HomeController homeController = new HomeController(usuario);
+                    if (trueOrFalse) {
+                        AdminHomeView adminHomeView = new AdminHomeView(homeController);
+                        adminHomeView.setVisible(true); 
+                    } else {
+                        HomeView homeView = new HomeView(homeController);
+                        homeView.setVisible(true); 
+                    }
                     dispose(); // Cierra la ventana actual de inicio de sesión
                 } else {
-                    //System.out.println("Credenciales inválidas. Por favor, inténtalo de nuevo.");
                     JOptionPane.showMessageDialog(null, "Credenciales inválidas. Por favor, inténtalo de nuevo.");
                 }
             }
         });
 
         buttonPanel.add(loginButton);
-        formPanel.setBorder(BorderFactory.createEmptyBorder(100,30,0,30));
+        formPanel.setBorder(BorderFactory.createEmptyBorder(100, 30, 0, 30));
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(0, 30, 100, 30));
 
         panel.add(formPanel, BorderLayout.CENTER);
