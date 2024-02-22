@@ -7,11 +7,11 @@ import main.models.Course;
 import main.models.User;
 import java.awt.*;
 
-public class HomeView extends javax.swing.JFrame {
+public class AdminHomeView extends javax.swing.JFrame {
     private javax.swing.JButton[] cour;
     private HomeController controller;
 
-    public HomeView(HomeController controller) {
+    public AdminHomeView(HomeController controller) {
         initComponents();
         this.controller = controller;
         this.cour = new javax.swing.JButton[9];
@@ -235,8 +235,10 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-       
-    }
+        LoginView logInView = new LoginView();
+        logInView.setVisible(true);
+        this.dispose(); // Cierra la ventana actual (HomeView)
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         HelpView helpView = new HelpView(controller);
@@ -252,7 +254,7 @@ public class HomeView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        LogOutView logoutView = new LogOutView(HomeView.this);
+        LogOutView logoutView = new LogOutView(AdminHomeView.this);
         logoutView.setVisible(true);
         this.dispose(); // Cierra la ventana actual (HomeView)
     }//GEN-LAST:event_jButton13ActionPerformed
