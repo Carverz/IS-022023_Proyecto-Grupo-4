@@ -27,7 +27,7 @@ public class MakeExamView extends JFrame {
     private String pathImg = "";
     private JPanel buttonPanel;
 
-    public MakeExamView(NoSeloquevayaaqui previusFrame) {
+    public MakeExamView(AdminHomeView previusFrame) {
         questions = new ArrayList<>();
 
         try {
