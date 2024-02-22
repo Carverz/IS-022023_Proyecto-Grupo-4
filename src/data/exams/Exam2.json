@@ -1,0 +1,56 @@
+[
+    {
+        "duration": 45,
+        "name": "Exam2",
+        "questions": [
+            {
+                "domain": "Animacion",
+                "imgPath": null,
+                "answers": [
+                    {
+                        "text": "Ricardo Perez",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "Jose Slobotzky",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "Eugenio Derbez",
+                        "trueOrFalse": true
+                    },
+                    {
+                        "text": "Mario Higareda",
+                        "trueOrFalse": false
+                    }
+                ],
+                "text": "Quien hace la voz del Dragon de Mulan?",
+                "justification": "Eugenia Derbez, menol"
+            },
+            {
+                "domain": "Animacion",
+                "imgPath": null,
+                "answers": [
+                    {
+                        "text": "Ricardo Perez",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "Jose Slobotzky",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "Eugenio Derbez",
+                        "trueOrFalse": true
+                    },
+                    {
+                        "text": "Mario Higareda",
+                        "trueOrFalse": false
+                    }
+                ],
+                "text": "Quien hace la voz del Dragon de Mulan?",
+                "justification": "Eugenia Derbez, menol"
+            }
+        ]
+    }
+]

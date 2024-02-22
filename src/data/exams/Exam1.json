@@ -1,0 +1,36 @@
+[
+    {
+        "duration": 120,
+        "name": "Exam1",
+        "questions": [
+            {
+                "domain": "Algebra",
+                "imgPath": null,
+                "answers": [
+                    {
+                        "text": "5",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "6",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "4",
+                        "trueOrFalse": true
+                    },
+                    {
+                        "text": "7",
+                        "trueOrFalse": false
+                    },
+                    {
+                        "text": "8",
+                        "trueOrFalse": false
+                    }
+                ],
+                "text": "�Cuanto es 2 + 2?",
+                "justification": "2 + 2 = 4"
+            }
+        ]
+    }
+]

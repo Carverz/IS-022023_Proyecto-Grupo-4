@@ -176,7 +176,6 @@ public class MakeExamView extends JFrame {
         });
 
         fileChooserButton.addActionListener(new ActionListener() {
-            @SuppressWarnings("unchecked")
             @Override
             public void actionPerformed(ActionEvent e) {
                 String pathImg;
@@ -184,12 +183,9 @@ public class MakeExamView extends JFrame {
                 FileNameExtensionFilter filter = new FileNameExtensionFilter("jpg, jpeg & png", "jpg", "png", "jpeg");
                 fileChooser.setFileFilter(filter);
                 int resp = fileChooser.showOpenDialog(null);
-                // System.out.println(resp);
                 if (resp == JFileChooser.APPROVE_OPTION) {
                     pathImg = fileChooser.getSelectedFile().getPath();
-                    // questions.get(questions.size() - 1).setImg(pathImg);
                     question.setImg(pathImg);
-                    // System.out.println(pathImg);
                 }
             }
         });
@@ -214,7 +210,7 @@ public class MakeExamView extends JFrame {
                     examenes.add(examObject);
 
                     try {
-                        FileWriter file = new FileWriter("src\\main\\data\\" + examName + ".json");
+                        FileWriter file = new FileWriter("src\\data\\" + examName + ".json");
                         file.append(examenes.toJSONString());
                         file.flush();
                         file.close();
@@ -243,19 +239,6 @@ public class MakeExamView extends JFrame {
         pack();
         setVisible(true);
     }
-
-    // public void actionPerformed(ActionEvent e) {
-    // String pathImg;
-    // JFileChooser fileChooser = new JFileChooser();
-    // int resp = fileChooser.showOpenDialog(this);
-    // FileNameExtensionFilter filter = new FileNameExtensionFilter("jpg, jpeg &
-    // png", "jpg", "png", "jpeg");
-    // fileChooser.setFileFilter(filter);
-    // if (resp == JFileChooser.APPROVE_OPTION) {
-    // pathImg = fileChooser.getSelectedFile().getPath();
-    // question.setImg(pathImg);
-    // }
-    // }
 
     public static void main(String[] args) {
         new MakeExamView();

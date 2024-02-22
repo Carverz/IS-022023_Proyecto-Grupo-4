@@ -16,7 +16,7 @@ public class CredentialsController{
         JSONParser parser = new JSONParser();
 
         try{
-            Object obj = parser.parse(new FileReader("src\\main\\data\\Datos.json"));
+            Object obj = parser.parse(new FileReader("src\\data\\Datos.json"));
             JSONObject jsonObject = (JSONObject) obj;
 
             JSONArray array = (JSONArray) jsonObject.get("Datos");
