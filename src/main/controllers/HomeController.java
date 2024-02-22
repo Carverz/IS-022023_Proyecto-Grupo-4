@@ -35,7 +35,7 @@ public class HomeController {
 
             Exam examen = new Exam(pregunta,120,name);
             examController = new TakeExamController(examen,usuario);
-            return ExamController;
+            return examController;
         }
         return null;
     }

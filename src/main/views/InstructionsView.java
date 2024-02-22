@@ -130,7 +130,7 @@ public class InstructionsView extends JFrame {
         acceptButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                examController = controller.getExamController(exam)
+                examController = controller.getExamController(exam);
                 ExamView view = new ExamView(examController,0);
                 dispose();
                 // Lógica para manejar el clic en el botón "Aceptar"
