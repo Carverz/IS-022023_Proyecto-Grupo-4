@@ -3,6 +3,7 @@ package main.views;
 import javax.swing.*;
 import main.controllers.HomeController;
 import main.controllers.ProfileController;
+import main.controllers.TakeExamController;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,9 +11,13 @@ import java.awt.event.ActionListener;
 public class InstructionsView extends JFrame {
 
     private ProfileController Controller;
+    private TakeExamController examController;
+    private String exam;
 
-    public InstructionsView(HomeController controller) {
+    public InstructionsView(HomeController controller,String exam) {
         this.Controller = new ProfileController(controller.usuario);
+        this.exam = exam;
+        
         setTitle("Instrucciones");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700, 600);
@@ -125,6 +130,9 @@ public class InstructionsView extends JFrame {
         acceptButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                examController = controller.getExamController(exam);
+                TakeExamView view = new TakeExamView(examController,0);
+                dispose();
                 // Lógica para manejar el clic en el botón "Aceptar"
             }
         });

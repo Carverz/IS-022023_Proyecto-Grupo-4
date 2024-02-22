@@ -6,6 +6,13 @@ import main.controllers.ProfileController;
 import main.models.Course;
 import main.models.User;
 import java.awt.*;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class AdminHomeView extends javax.swing.JFrame {
     private javax.swing.JButton[] cour;
@@ -13,26 +20,28 @@ public class AdminHomeView extends javax.swing.JFrame {
 
     public AdminHomeView(HomeController controller) {
         initComponents();
+        JSONParser parse = new JSONParser();
+        try{
+            Object obj = parse.parse(new FileReader("src\\data\\exams\\Exam1.json"));
+            JSONArray jsonArray = (JSONArray) obj;
+            JSONObject jsonObject = (JSONObject)jsonArray.get(0);
+            
+            jButton1.setText((String)jsonObject.get("name"));
+            jButton1.setEnabled(true);
+            obj = parse.parse(new FileReader("src\\data\\exams\\Exam2.json"));
+             jsonArray = (JSONArray) obj;
+             jsonObject = (JSONObject)jsonArray.get(0);
+            jButton2.setText((String)jsonObject.get("name"));
+            jButton2.setEnabled(true);
+        }catch(FileNotFoundException e) { }
+        catch(IOException e) { }
+        catch(ParseException e) {System.out.print("no leido"); }
+        
         this.controller = controller;
-        this.cour = new javax.swing.JButton[9];
-        this.cour[0] = this.jButton1;
-        this.cour[1] = this.jButton2;
-        this.cour[2] = this.jButton3;
-        this.cour[3] = this.jButton4;
-        this.cour[4] = this.jButton5;
-        this.cour[5] = this.jButton6;
-        this.cour[6] = this.jButton7;
-        this.cour[7] = this.jButton8;
-        this.cour[8] = this.jButton9;
-
-        for (int i = 0; controller.getName(i) != null; i++) {
-            this.cour[i].setEnabled(true);
-            this.cour[i].setText("<html>" + controller.getName(i) + "<html>");
-        }
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+    
     private void initComponents() {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -70,6 +79,12 @@ public class AdminHomeView extends javax.swing.JFrame {
         });
 
         jButton2.setEnabled(false);
+
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setEnabled(false);
 
@@ -224,44 +239,48 @@ public class AdminHomeView extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {
 
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+       InstructionsView view = new InstructionsView(controller,jButton1.getText());
+        view.setVisible(true);
+       dispose();
+    }
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        LoginView logInView = new LoginView();
-        logInView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton10ActionPerformed
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {
+       
+    }
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {
         HelpView helpView = new HelpView(controller);
         helpView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton11ActionPerformed
+        this.dispose(); 
+    }
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {
         ProfileController profileController = new ProfileController(controller.usuario);
         ProfileView profileView = new ProfileView(profileController);
         profileView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton12ActionPerformed
+        this.dispose(); 
+    }
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {
         LogOutView logoutView = new LogOutView(AdminHomeView.this);
         logoutView.setVisible(true);
-        this.dispose(); // Cierra la ventana actual (HomeView)
-    }//GEN-LAST:event_jButton13ActionPerformed
+        this.dispose(); 
+    }
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+       InstructionsView view = new InstructionsView(controller,jButton1.getText());
+        view.setVisible(true);
+       dispose();
+    }     
+
+    
     public static void main(String args[]) {
 
         try {
@@ -283,9 +302,9 @@ public class AdminHomeView extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                int[] num = {0, 1, 2, -1, -1, -1, -1, -1, -1};
+                
 
-                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ", "EMAIL", "ZARVACE", num);
+                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ", "EMAIL", "ZARVACE");
                 Course[] curso = new Course[3];
                 curso[0] = new Course("Lenguaje de Programación Java: Nivel Basico");
                 curso[1] = new Course("Lenguaje de Programación C++: Nivel Basico");
