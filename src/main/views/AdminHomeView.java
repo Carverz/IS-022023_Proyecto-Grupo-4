@@ -246,7 +246,7 @@ public class AdminHomeView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-       InstructionsView view = new InstructionsView(controller);
+       InstructionsView view = new InstructionsView(controller,jButton1.getText());
         view.setVisible(true);
        dispose();
     }
@@ -275,7 +275,7 @@ public class AdminHomeView extends javax.swing.JFrame {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        InstructionsView view = new InstructionsView(controller);
+       InstructionsView view = new InstructionsView(controller,jButton1.getText());
         view.setVisible(true);
        dispose();
     }     
