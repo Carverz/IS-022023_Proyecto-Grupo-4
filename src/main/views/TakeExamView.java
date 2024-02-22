@@ -21,7 +21,6 @@ import main.models.Exam;
 public class TakeExamView extends javax.swing.JFrame implements ActionListener {
 
    private List<JRadioButton> buttons;
-   //private ButtonGroup group;
    private Timer temporizador;
    public int minute;
    public int hour;
@@ -99,13 +98,13 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
     }
     
     private void iniRadioButtons(){
-      //  group = new ButtonGroup();
+     
        buttons = new ArrayList<>();
        for(int i=0;i<controller.getIterator(index);i++){
            JRadioButton boton = new JRadioButton(controller.getTextAnswer(index, i));
            panel.add(boton);
            buttons.add(i, boton);
-        //   group.add(boton);
+        
            boton.addActionListener(this);
            
        }
@@ -179,7 +178,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
   
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -217,7 +216,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
         enunciado.setText("jLabel2");
         enunciado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); 
         jLabel1.setText("Respuesta:");
 
         jScrollPane1.setBorder(null);
@@ -294,7 +293,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
         });
 
         progress.setToolTipText("PROGRESO");
-        progress.setName("progeso"); // NOI18N
+        progress.setName("progeso"); 
         progress.setString("PROGRESO");
         progress.setStringPainted(true);
 
@@ -402,7 +401,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
         int k=seleccionPrev;
@@ -423,32 +422,30 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
       
       
        this.dispose();
-    }//GEN-LAST:event_nextActionPerformed
+    }
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {
         prevView.setVisible(true);
         this.setTextTimer();
         this.dispose();
         prevView.setTextTimer();
-    }//GEN-LAST:event_backActionPerformed
+    }
 
     private void doneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneActionPerformed
        int confirmacion = JOptionPane.showConfirmDialog(this, "Esta seguro que desea terminar el exame?",null,JOptionPane.YES_NO_OPTION);
        if(confirmacion == JOptionPane.YES_OPTION)
            dispose();
        
-    }//GEN-LAST:event_doneActionPerformed
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+       
+    }
 
     public static void main(String args[]) {
         
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+       
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -465,7 +462,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TakeExamView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+       
 
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -500,17 +497,17 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
                 
                 
                 
-                //Exam c = new Exam(b,1,"");
+                Exam c = new Exam(b,1,"");
                 
-                //TakeExamController controller = new TakeExamController(c);
+                TakeExamController controller = new TakeExamController(c);
                 
-               // new ExamView(controller,0).setVisible(true);
+                new ExamView(controller,0).setVisible(true);
             }
         });
     }
 
     
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    
     private javax.swing.JLabel ans;
     private javax.swing.JButton back;
     private javax.swing.JButton done;
@@ -531,7 +528,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JLabel quest;
     private javax.swing.JLabel questNumber;
     private javax.swing.JLabel timer;
-    // End of variables declaration//GEN-END:variables
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -558,9 +555,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
                 
                 }
              
-                //controller.setRespuesta(controller.getRightAnswer(index,i));
-                //controller.setRespuesta(controller.getRightAnswer(index,i),index);
-                //System.out.print(controller.respuesta.get(index));
+              
                
                 
         }
@@ -578,9 +573,7 @@ public class TakeExamView extends javax.swing.JFrame implements ActionListener {
                 
                 if(controller.getRespuestaSize()<seleccionMax)
                 controller.setRespuesta(false);
-                //controller.setRespuesta(controller.getRightAnswer(index,i),index);
-                //System.out.print(controller.respuesta.get(index));
-                
+               
             }    
         }
         setTextTimer();
