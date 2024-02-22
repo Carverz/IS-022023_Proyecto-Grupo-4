@@ -6,7 +6,7 @@ import java.util.List;
 import main.models.Exam;
 import main.models.Question;
 import main.models.Answer;
-import main.models.User;
+
 
 public class TakeExamController {
     private Exam examen;
@@ -15,9 +15,9 @@ public class TakeExamController {
     private int minute;
     private int second;
     private float result;
-    private User usuario;
+  
     
-    public TakeExamController(Exam examen,User usuario){
+    public TakeExamController(Exam examen){
         this.examen = examen;
         respuesta = new ArrayList<>();
         hour=0;
@@ -114,8 +114,5 @@ public class TakeExamController {
         return result;
     }
     
-    public User getUsuario(){
-        return this.usuario;
-    }
 }
     
