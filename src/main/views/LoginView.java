@@ -79,12 +79,14 @@ public class LoginView extends JFrame {
                 String mail = mailField.getText();
                 String password = new String(passwordField.getPassword());
                 String name = "";
-                boolean trueOrFalse = false;
+                boolean trueOrFalse = true;
                 CredentialsController check = new CredentialsController();
+                System.out.println(trueOrFalse);
 
                 if (check.checkCredentials(mail, password, name, trueOrFalse)) {
                     User usuario = new User(name, mail, password);
                     HomeController homeController = new HomeController(usuario);
+                    System.out.println(trueOrFalse);
                     if (trueOrFalse) {
                         AdminHomeView adminHomeView = new AdminHomeView(homeController);
                         adminHomeView.setVisible(true); 
@@ -109,6 +111,10 @@ public class LoginView extends JFrame {
         getContentPane().add(panel);
 
         setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new LoginView();
     }
 
 }

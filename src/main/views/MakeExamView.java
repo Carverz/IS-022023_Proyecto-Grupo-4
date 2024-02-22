@@ -25,8 +25,9 @@ public class MakeExamView extends JFrame {
     private JButton addQuestionButton;
     private JButton generateExamButton;
     private String pathImg = "";
+    private JPanel buttonPanel;
 
-    public MakeExamView() {
+    public MakeExamView(NoSeloquevayaaqui previusFrame) {
         questions = new ArrayList<>();
 
         try {
@@ -93,6 +94,11 @@ public class MakeExamView extends JFrame {
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
         add(mainPanel, BorderLayout.CENTER);
+
+        buttonPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JButton myButton = new JButton("Regresar");
+        buttonPanel.add(myButton);
+        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 
         addQuestionButton.addActionListener(new ActionListener() {
             @Override
@@ -187,6 +193,14 @@ public class MakeExamView extends JFrame {
             }
         });
 
+        myButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                previusFrame.setVisible(true);
+                dispose();
+            }
+        });
+
         generateExamButton.addActionListener(new ActionListener() {
             @SuppressWarnings("unchecked")
             @Override
@@ -237,7 +251,7 @@ public class MakeExamView extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new MakeExamView();
-    }
+    // public static void main(String[] args) {
+    //     new MakeExamView();
+    // }
 }
