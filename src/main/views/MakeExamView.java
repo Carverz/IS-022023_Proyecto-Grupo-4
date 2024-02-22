@@ -124,14 +124,6 @@ public class MakeExamView extends JFrame {
                         }
                     }
 
-                    // IMPRESION DE PRUEBA
-                    // System.out.print("Indices de las preguntas correctas: ");
-                    // for (int i = 0; i < con; i++) {
-                    // System.out.print(isCorrect[i] + " ");
-                    // }
-                    // System.out.println();
-                    ////////////////////////////////
-
                     ArrayList<Answer> answers = new ArrayList<>();
                     for (int i = 0, j = 0, m = 0; i < answerLines.length; i++) {
                         if (i == isCorrect[m]) {
@@ -171,11 +163,9 @@ public class MakeExamView extends JFrame {
 
                     // Limpiar los campos de texto
                     domainTextField.setText("");
-                    domainTextField.setText("");
                     questionTextArea.setText("");
                     answerTextArea.setText("");
                     justificationTextArea.setText("");
-                    System.out.println(question.getImg());
                 }
             }
         });

@@ -79,25 +79,29 @@ public class LoginView extends JFrame {
                 String mail = mailField.getText();
                 String password = new String(passwordField.getPassword());
                 String name = "";
-                boolean trueOrFalse = true;
                 CredentialsController check = new CredentialsController();
-                System.out.println(trueOrFalse);
 
-                if (check.checkCredentials(mail, password, name)) {
+                if (check.checkCredentialsAdmin(mail, password, name)) {
                     User usuario = new User(name, mail, password);
                     HomeController homeController = new HomeController(usuario);
-                    // System.out.println(trueOrFalse);
-                    // if (trueOrFalse) {
-                    //     AdminHomeView adminHomeView = new AdminHomeView(homeController);
-                    //     adminHomeView.setVisible(true); 
-                    // } else {
-                        HomeView homeView = new HomeView(homeController);
-                        homeView.setVisible(true); 
-                    // }
-                    dispose(); // Cierra la ventana actual de inicio de sesión
-                } else {
+                    AdminHomeView adminHomeView = new AdminHomeView(homeController);
+                    adminHomeView.setVisible(true); 
+                    dispose();
+                } 
+
+                else if (check.checkCredentials(mail, password, name)) {
+                    User usuario = new User(name, mail, password);
+                    HomeController homeController = new HomeController(usuario);
+                    HomeView homeView = new HomeView(homeController);
+                    homeView.setVisible(true); 
+                    dispose();
+                } 
+                
+                else {
                     JOptionPane.showMessageDialog(null, "Credenciales inválidas. Por favor, inténtalo de nuevo.");
                 }
+
+
             }
         });
 

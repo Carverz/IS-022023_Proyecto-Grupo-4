@@ -20,6 +20,7 @@ public class HomeView extends javax.swing.JFrame {
     
 
     public HomeView(HomeController controller) {
+        setLocationRelativeTo(null);
         initComponents();
         JSONParser parse = new JSONParser();
         try{
