@@ -34,7 +34,7 @@ public class HomeController {
             pregunta.add(new Question("¿Cuanto es 2 + 2?",respuesta,"2 + 2 = 4","Algebra"));
 
             Exam examen = new Exam(pregunta,120,name);
-            examController = new TakeExamController(examen,usuario);
+            examController = new TakeExamController(examen);
             return examController;
         }
         return null;
