@@ -14,11 +14,7 @@ public class ProfileController {
         curso[2] = new Course("Lenguaje de Programación PHP: Nivel Basico");
     }
     
-    public String getName(int i){
-        if(usuario.getCourseData()[i]<0)
-            return null;
-        return curso[usuario.getCourseData()[i]].getName();
-    }
+
     
     public String getUserName() {
         return usuario.getName();

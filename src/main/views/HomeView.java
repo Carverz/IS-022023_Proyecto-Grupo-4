@@ -302,9 +302,9 @@ public class HomeView extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                int[] num = {0, 1, 2, -1, -1, -1, -1, -1, -1};
+                
 
-                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ", "EMAIL", "ZARVACE", num);
+                User usuar = new User("CARLOS EDUARDO ZAVARCE VELASQUEZ", "EMAIL", "ZARVACE");
                 Course[] curso = new Course[3];
                 curso[0] = new Course("Lenguaje de Programación Java: Nivel Basico");
                 curso[1] = new Course("Lenguaje de Programación C++: Nivel Basico");
