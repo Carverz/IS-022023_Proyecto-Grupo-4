@@ -186,6 +186,10 @@ public class MakeExamView extends JFrame {
         myButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+=======
+                //previusFrame.setVisible(true);
+>>>>>>> b3a65be621dddf842a1d2ec8770c485be074e033
                 dispose();
             }
         });

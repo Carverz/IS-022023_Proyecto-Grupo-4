@@ -47,7 +47,7 @@ public class InstructionsView extends JFrame {
         topPanel.add(leftButtonPanel, BorderLayout.WEST);
         topPanel.add(rightButtonPanel, BorderLayout.EAST);
 
-        add(topPanel, BorderLayout.NORTH); // Agrega topPanel al contenedor principal
+        add(topPanel, BorderLayout.NORTH); 
 
         profileButton.addActionListener(new ActionListener() {
             @Override
@@ -80,17 +80,17 @@ public class InstructionsView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implementa la lógica para mostrar el texto de ayuda
+                
             }
         });
 
         JPanel optionsPanel = new JPanel();
         optionsPanel.setBackground(Color.white);
         optionsPanel.setForeground(Color.black);
-        optionsPanel.setLayout(new BoxLayout(optionsPanel, BoxLayout.Y_AXIS)); // Orientación vertical
-        optionsPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Añade un espacio alrededor del panel
+        optionsPanel.setLayout(new BoxLayout(optionsPanel, BoxLayout.Y_AXIS)); 
+        optionsPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); 
 
-        Font questionFont = new Font("Arial", Font.BOLD, 20); // Fuente y tamaño del texto para las preguntas
+        Font questionFont = new Font("Arial", Font.BOLD, 20); 
 
         JLabel option1Label = new JLabel("<html><span style='font-size:20px; color:black;'>1- El examen tendrá una duración de 1 hora, si se termina el tiempo, el examen finalizará con las preguntas respondidas hasta ese momento.\n </span></html>");
         option1Label.setFont(questionFont);
@@ -105,26 +105,26 @@ public class InstructionsView extends JFrame {
         option4Label.setFont(questionFont);
 
         optionsPanel.add(option1Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option2Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option3Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option4Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10)));
 
-        add(optionsPanel, BorderLayout.CENTER); // Agrega optionsPanel al centro del contenedor principal
+        add(optionsPanel, BorderLayout.CENTER); 
 
-        // Crea el botón "Aceptar"
+        
         JButton acceptButton = new JButton("Aceptar");
-        acceptButton.setFont(new Font("Arial", Font.BOLD, 24)); // Ajusta el tamaño de la fuente del botón
+        acceptButton.setFont(new Font("Arial", Font.BOLD, 24)); 
 
-        // Crea un panel para contener el botón "Aceptar"
-        JPanel acceptButtonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); // Utiliza FlowLayout para centrar el botón
+        
+        JPanel acceptButtonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
         acceptButtonPanel.setBackground(Color.white);
         acceptButtonPanel.add(acceptButton);
 
-        // Agrega el panel del botón "Aceptar" al contenedor principal debajo del panel de opciones
+        
         add(acceptButtonPanel, BorderLayout.SOUTH);
 
         acceptButton.addActionListener(new ActionListener() {
@@ -133,7 +133,7 @@ public class InstructionsView extends JFrame {
                 examController = controller.getExamController(exam);
                 TakeExamView view = new TakeExamView(examController,0);
                 dispose();
-                // Lógica para manejar el clic en el botón "Aceptar"
+               
             }
         });
     }

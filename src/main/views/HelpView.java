@@ -41,7 +41,7 @@ public class HelpView extends JFrame {
         topPanel.add(leftButtonPanel, BorderLayout.WEST);
         topPanel.add(rightButtonPanel, BorderLayout.EAST);
 
-        add(topPanel, BorderLayout.NORTH); // Agrega topPanel al contenedor principal
+        add(topPanel, BorderLayout.NORTH); 
 
         profileButton.addActionListener(new ActionListener() {
             @Override
@@ -74,17 +74,17 @@ public class HelpView extends JFrame {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Implementa la lógica para mostrar el texto de ayuda
+                
             }
         });
 
         JPanel optionsPanel = new JPanel();
         optionsPanel.setBackground(Color.white);
         optionsPanel.setForeground(Color.black);
-        optionsPanel.setLayout(new BoxLayout(optionsPanel, BoxLayout.Y_AXIS)); // Orientación vertical
-        optionsPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Añade un espacio alrededor del panel
+        optionsPanel.setLayout(new BoxLayout(optionsPanel, BoxLayout.Y_AXIS)); 
+        optionsPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); 
 
-        Font questionFont = new Font("Arial", Font.BOLD, 20); // Fuente y tamaño del texto para las preguntas
+        Font questionFont = new Font("Arial", Font.BOLD, 20); 
 
         JLabel option1Label = new JLabel("<html><span style='font-size:20px; color:blue;'>¿Cómo puedo ver mi perfil?</span><br/><span style='font-size:16px;'>Haz clic en el botón de la parte superior (Perfil)</span></html>");
         option1Label.setFont(questionFont);
@@ -102,15 +102,15 @@ public class HelpView extends JFrame {
         option5Label.setFont(questionFont);
 
         optionsPanel.add(option1Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option2Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option3Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option4Label);
-        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // Añade espacio entre las preguntas
+        optionsPanel.add(Box.createRigidArea(new Dimension(0, 10))); 
         optionsPanel.add(option5Label);
 
-        add(optionsPanel, BorderLayout.CENTER); // Agrega optionsPanel al centro del contenedor principal
+        add(optionsPanel, BorderLayout.CENTER);
     }
 }
