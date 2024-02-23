@@ -125,7 +125,7 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 
 Corriendo el archivo Main.java se cubren las pantallas: LoginView, HomeView, HelpView, ProfileView, LogOutView e InstructionsView.
 
-MakeExamView, TakeExaemView, FinishExamView se pueden correr por separado ya que no estan conectadas a las demas pantallas
+MakeExamView, TakeExaemView, FinishExamView se deben correr por separado, desde sus clases correspondientes, ya que no estan conectadas el resto de pantallas
 
 # MODELO DE PRUEBAS -------------
 
