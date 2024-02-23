@@ -129,12 +129,12 @@ MakeExamView, TakeExaemView, FinishExamView se deben correr por separado, desde 
 
 **Credenciales para Iniciar Sesion**
 
-Usuario 1: 
+**Usuario 1:**
 Correo: Carlos, Contraseña: Zavarce
 
-Usuario 2: Brhandon, Contraseña: Palomo
+**Usuario 2:** Correo: Brhandon, Contraseña: Palomo
 
-Usuario 3: 
+**Usuario 3:**
 Correo: Luis, Contraseña: D'antuono
 
 # MODELO DE PRUEBAS -------------
