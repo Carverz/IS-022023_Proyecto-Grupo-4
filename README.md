@@ -127,6 +127,16 @@ Corriendo el archivo Main.java se cubren las pantallas: LoginView, HomeView, Hel
 
 MakeExamView, TakeExaemView, FinishExamView se deben correr por separado, desde sus clases correspondientes, ya que no estan conectadas el resto de pantallas
 
+**Credenciales para Iniciar Sesion**
+
+Usuario 1: 
+Correo: Carlos, Contraseña: Zavarce
+
+Usuario 2: Brhandon, Contraseña: Palomo
+
+Usuario 3: 
+Correo: Luis, Contraseña: D'antuono
+
 # MODELO DE PRUEBAS -------------
 
 - AnswerTest
