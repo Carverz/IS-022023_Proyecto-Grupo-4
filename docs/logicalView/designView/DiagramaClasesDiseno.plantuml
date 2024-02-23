@@ -27,11 +27,6 @@ class User{
     -String getCourseData(courseID) 
 }  
 
-class Course{ 
-    -String name 
-    -String nameProfessor 
-}  
-
 class Certificate{ 
     -String nameStuden 
     -String nameProfessor 
@@ -43,10 +38,7 @@ class Certificate{
 RequestCertificateView-->RequestCertificateController 
 RequestCertificateView--Menubar
 RequestCertificateController-->User 
-RequestCertificateController---->Course 
 RequestCertificateController------>Certificate 
-User-- Course 
-Certificate-- Course 
 User-- Certificate  
 
 @enduml

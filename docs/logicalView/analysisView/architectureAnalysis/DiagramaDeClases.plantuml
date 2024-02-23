@@ -1,6 +1,6 @@
 @startuml DiagramaDeClasesGenerales
 
-class CourseView {}
+class HomeView {}
 
 class Result
 { 
@@ -16,6 +16,10 @@ class User
     +getName() 
     +getLastName() 
     +getEmail() 
+}
+
+class InstructionsView{
+
 }
 
 class Exam
@@ -43,13 +47,6 @@ class ExamView
     +showQuestion(AnswerQuestionController) 
 }
 
-class Course
-{ 
-    -name 
-    -nameProfessor 
-    +getName() 
-    +getNameProfessor() 
-    }
 
 class Certificate
 {
@@ -75,16 +72,13 @@ class MenuBar{
 +search()
 }
 
-CourseView *-- RequestCertificateView
-CourseView *-- ExamView
+HomeView *-- RequestCertificateView
+InstructionsView *-- ExamView 
+RequestCertificateView  *--InstructionsView
 RequestCertificateView-->RequestCertificate
 ExamView --> TakeExamController
 TakeExamController--> AnswerQuestionController
-RequestCertificate--> User
-RequestCertificate--> Course
 RequestCertificate-->Certificate
-User --> Course
-Certificate --> Course
 Certificate --> User
 
 TakeExamController--> Exam
@@ -93,10 +87,10 @@ AnswerQuestionController--> Question
 Exam --> Question
 Exam --> Result
 User --> Result
-User --> Question
 User --> Answer
 Question --> Answer
 ExamView *-- MenuBar
 RequestCertificateView *-- MenuBar
+InstructionsView *-- MenuBar
 
  @enduml

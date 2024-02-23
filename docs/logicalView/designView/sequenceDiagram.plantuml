@@ -5,7 +5,7 @@ boundary RequestCertificateView
 control RequestCertificateController
 entity User
 entity Certificate
-entity Course
+entity Exam
 
 
 activate Student
@@ -15,10 +15,10 @@ RequestCertificateView -> RequestCertificateController: request(user)
 activate RequestCertificateController
 RequestCertificateController -> User: getUserData(user)
 activate User
-User -> Course: getCourseData(courseID)
-activate Course
-Course --> User: courseData
-deactivate Course
+User -> Exam: getExamName(exam)
+activate Exam
+Exam --> User: examName
+deactivate Exam
 User --> RequestCertificateController: userData
 deactivate User
 RequestCertificateController -> Certificate: new Certificate()
