@@ -119,6 +119,18 @@ https://drive.google.com/drive/folders/1CETm9X3bjm2Xg2-WLf5qttugfLHM23fX?usp=sha
 - javax.swing
 - java.awt
 - java.util
+- json-simple-1.1.1 
 
-**Instrucciones**
-En la carpeta src\main\views, Compilar y ejecutar LoginView.java
+**Instrucciones para correr el codigo**
+
+Corriendo el archivo Main.java se cubren las pantallas: LoginView, HomeView, HelpView, ProfileView, LogOutView e InstructionsView.
+
+MakeExamView, TakeExaemView, FinishExamView se pueden correr por separado ya que no estan conectadas a las demas pantallas
+
+# MODELO DE PRUEBAS -------------
+
+- AnswerTest
+- ExamTest
+- ProfileControllerTest
+- QuestionTest
+- UserTest

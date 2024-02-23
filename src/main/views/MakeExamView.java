@@ -27,7 +27,7 @@ public class MakeExamView extends JFrame {
     private String pathImg = "";
     private JPanel buttonPanel;
 
-    public MakeExamView(AdminHomeView previusFrame) {
+    public MakeExamView() {
         questions = new ArrayList<>();
 
         try {
@@ -186,7 +186,6 @@ public class MakeExamView extends JFrame {
         myButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                previusFrame.setVisible(true);
                 dispose();
             }
         });
@@ -241,7 +240,7 @@ public class MakeExamView extends JFrame {
         setVisible(true);
     }
 
-    // public static void main(String[] args) {
-    //     new MakeExamView();
-    // }
+    public static void main(String[] args) {
+        new MakeExamView();
+    }
 }
